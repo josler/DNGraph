@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D85AE0D16CEAA0300F0FF77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D85AE0C16CEAA0300F0FF77 /* UIKit.framework */; };
+		7D85AE0F16CEAA0300F0FF77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D85AE0E16CEAA0300F0FF77 /* Foundation.framework */; };
+		7D85AE1116CEAA0300F0FF77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D85AE1016CEAA0300F0FF77 /* CoreGraphics.framework */; };
+		7D85AE1316CEAA0300F0FF77 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D85AE1216CEAA0300F0FF77 /* CoreData.framework */; };
+		7D85AE1916CEAA0300F0FF77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D85AE1716CEAA0300F0FF77 /* InfoPlist.strings */; };
+		7D85AE1B16CEAA0300F0FF77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE1A16CEAA0300F0FF77 /* main.m */; };
+		7D85AE1F16CEAA0300F0FF77 /* DNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE1E16CEAA0300F0FF77 /* DNAppDelegate.m */; };
+		7D85AE2116CEAA0300F0FF77 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D85AE2016CEAA0300F0FF77 /* Default.png */; };
+		7D85AE2316CEAA0300F0FF77 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D85AE2216CEAA0300F0FF77 /* Default@2x.png */; };
+		7D85AE2516CEAA0300F0FF77 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D85AE2416CEAA0300F0FF77 /* Default-568h@2x.png */; };
+		7D85AE2816CEAA0300F0FF77 /* DNGraph.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE2616CEAA0300F0FF77 /* DNGraph.xcdatamodeld */; };
+		7D85AE3016CEAA0400F0FF77 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D85AE2F16CEAA0400F0FF77 /* SenTestingKit.framework */; };
+		7D85AE3116CEAA0400F0FF77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D85AE0C16CEAA0300F0FF77 /* UIKit.framework */; };
+		7D85AE3216CEAA0400F0FF77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D85AE0E16CEAA0300F0FF77 /* Foundation.framework */; };
+		7D85AE3316CEAA0400F0FF77 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D85AE1216CEAA0300F0FF77 /* CoreData.framework */; };
+		7D85AE3B16CEAA0400F0FF77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D85AE3916CEAA0400F0FF77 /* InfoPlist.strings */; };
+		7D85AE3E16CEAA0400F0FF77 /* DNGraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE3D16CEAA0400F0FF77 /* DNGraphTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D85AE3416CEAA0400F0FF77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D85AE0116CEAA0300F0FF77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D85AE0816CEAA0300F0FF77;
+			remoteInfo = DNGraph;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7D85AE0916CEAA0300F0FF77 /* DNGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D85AE0C16CEAA0300F0FF77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7D85AE0E16CEAA0300F0FF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7D85AE1016CEAA0300F0FF77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7D85AE1216CEAA0300F0FF77 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7D85AE1616CEAA0300F0FF77 /* DNGraph-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DNGraph-Info.plist"; sourceTree = "<group>"; };
+		7D85AE1816CEAA0300F0FF77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7D85AE1A16CEAA0300F0FF77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D85AE1C16CEAA0300F0FF77 /* DNGraph-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DNGraph-Prefix.pch"; sourceTree = "<group>"; };
+		7D85AE1D16CEAA0300F0FF77 /* DNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNAppDelegate.h; sourceTree = "<group>"; };
+		7D85AE1E16CEAA0300F0FF77 /* DNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNAppDelegate.m; sourceTree = "<group>"; };
+		7D85AE2016CEAA0300F0FF77 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7D85AE2216CEAA0300F0FF77 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7D85AE2416CEAA0300F0FF77 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7D85AE2716CEAA0300F0FF77 /* DNGraph.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DNGraph.xcdatamodel; sourceTree = "<group>"; };
+		7D85AE2E16CEAA0400F0FF77 /* DNGraphTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNGraphTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D85AE2F16CEAA0400F0FF77 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7D85AE3816CEAA0400F0FF77 /* DNGraphTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DNGraphTests-Info.plist"; sourceTree = "<group>"; };
+		7D85AE3A16CEAA0400F0FF77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7D85AE3C16CEAA0400F0FF77 /* DNGraphTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNGraphTests.h; sourceTree = "<group>"; };
+		7D85AE3D16CEAA0400F0FF77 /* DNGraphTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNGraphTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D85AE0616CEAA0300F0FF77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D85AE0D16CEAA0300F0FF77 /* UIKit.framework in Frameworks */,
+				7D85AE0F16CEAA0300F0FF77 /* Foundation.framework in Frameworks */,
+				7D85AE1116CEAA0300F0FF77 /* CoreGraphics.framework in Frameworks */,
+				7D85AE1316CEAA0300F0FF77 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D85AE2A16CEAA0400F0FF77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D85AE3016CEAA0400F0FF77 /* SenTestingKit.framework in Frameworks */,
+				7D85AE3116CEAA0400F0FF77 /* UIKit.framework in Frameworks */,
+				7D85AE3216CEAA0400F0FF77 /* Foundation.framework in Frameworks */,
+				7D85AE3316CEAA0400F0FF77 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D85AE0016CEAA0300F0FF77 = {
+			isa = PBXGroup;
+			children = (
+				7D85AE1416CEAA0300F0FF77 /* DNGraph */,
+				7D85AE3616CEAA0400F0FF77 /* DNGraphTests */,
+				7D85AE0B16CEAA0300F0FF77 /* Frameworks */,
+				7D85AE0A16CEAA0300F0FF77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D85AE0A16CEAA0300F0FF77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D85AE0916CEAA0300F0FF77 /* DNGraph.app */,
+				7D85AE2E16CEAA0400F0FF77 /* DNGraphTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D85AE0B16CEAA0300F0FF77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D85AE0C16CEAA0300F0FF77 /* UIKit.framework */,
+				7D85AE0E16CEAA0300F0FF77 /* Foundation.framework */,
+				7D85AE1016CEAA0300F0FF77 /* CoreGraphics.framework */,
+				7D85AE1216CEAA0300F0FF77 /* CoreData.framework */,
+				7D85AE2F16CEAA0400F0FF77 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D85AE1416CEAA0300F0FF77 /* DNGraph */ = {
+			isa = PBXGroup;
+			children = (
+				7D85AE1D16CEAA0300F0FF77 /* DNAppDelegate.h */,
+				7D85AE1E16CEAA0300F0FF77 /* DNAppDelegate.m */,
+				7D85AE2616CEAA0300F0FF77 /* DNGraph.xcdatamodeld */,
+				7D85AE1516CEAA0300F0FF77 /* Supporting Files */,
+			);
+			path = DNGraph;
+			sourceTree = "<group>";
+		};
+		7D85AE1516CEAA0300F0FF77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D85AE1616CEAA0300F0FF77 /* DNGraph-Info.plist */,
+				7D85AE1716CEAA0300F0FF77 /* InfoPlist.strings */,
+				7D85AE1A16CEAA0300F0FF77 /* main.m */,
+				7D85AE1C16CEAA0300F0FF77 /* DNGraph-Prefix.pch */,
+				7D85AE2016CEAA0300F0FF77 /* Default.png */,
+				7D85AE2216CEAA0300F0FF77 /* Default@2x.png */,
+				7D85AE2416CEAA0300F0FF77 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D85AE3616CEAA0400F0FF77 /* DNGraphTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D85AE3C16CEAA0400F0FF77 /* DNGraphTests.h */,
+				7D85AE3D16CEAA0400F0FF77 /* DNGraphTests.m */,
+				7D85AE3716CEAA0400F0FF77 /* Supporting Files */,
+			);
+			path = DNGraphTests;
+			sourceTree = "<group>";
+		};
+		7D85AE3716CEAA0400F0FF77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D85AE3816CEAA0400F0FF77 /* DNGraphTests-Info.plist */,
+				7D85AE3916CEAA0400F0FF77 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D85AE0816CEAA0300F0FF77 /* DNGraph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D85AE4116CEAA0400F0FF77 /* Build configuration list for PBXNativeTarget "DNGraph" */;
+			buildPhases = (
+				7D85AE0516CEAA0300F0FF77 /* Sources */,
+				7D85AE0616CEAA0300F0FF77 /* Frameworks */,
+				7D85AE0716CEAA0300F0FF77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNGraph;
+			productName = DNGraph;
+			productReference = 7D85AE0916CEAA0300F0FF77 /* DNGraph.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D85AE2D16CEAA0400F0FF77 /* DNGraphTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D85AE4416CEAA0400F0FF77 /* Build configuration list for PBXNativeTarget "DNGraphTests" */;
+			buildPhases = (
+				7D85AE2916CEAA0400F0FF77 /* Sources */,
+				7D85AE2A16CEAA0400F0FF77 /* Frameworks */,
+				7D85AE2B16CEAA0400F0FF77 /* Resources */,
+				7D85AE2C16CEAA0400F0FF77 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D85AE3516CEAA0400F0FF77 /* PBXTargetDependency */,
+			);
+			name = DNGraphTests;
+			productName = DNGraphTests;
+			productReference = 7D85AE2E16CEAA0400F0FF77 /* DNGraphTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D85AE0116CEAA0300F0FF77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DN;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "James Osler";
+			};
+			buildConfigurationList = 7D85AE0416CEAA0300F0FF77 /* Build configuration list for PBXProject "DNGraph" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7D85AE0016CEAA0300F0FF77;
+			productRefGroup = 7D85AE0A16CEAA0300F0FF77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D85AE0816CEAA0300F0FF77 /* DNGraph */,
+				7D85AE2D16CEAA0400F0FF77 /* DNGraphTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D85AE0716CEAA0300F0FF77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D85AE1916CEAA0300F0FF77 /* InfoPlist.strings in Resources */,
+				7D85AE2116CEAA0300F0FF77 /* Default.png in Resources */,
+				7D85AE2316CEAA0300F0FF77 /* Default@2x.png in Resources */,
+				7D85AE2516CEAA0300F0FF77 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D85AE2B16CEAA0400F0FF77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D85AE3B16CEAA0400F0FF77 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D85AE2C16CEAA0400F0FF77 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D85AE0516CEAA0300F0FF77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D85AE1B16CEAA0300F0FF77 /* main.m in Sources */,
+				7D85AE1F16CEAA0300F0FF77 /* DNAppDelegate.m in Sources */,
+				7D85AE2816CEAA0300F0FF77 /* DNGraph.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D85AE2916CEAA0400F0FF77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D85AE3E16CEAA0400F0FF77 /* DNGraphTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D85AE3516CEAA0400F0FF77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D85AE0816CEAA0300F0FF77 /* DNGraph */;
+			targetProxy = 7D85AE3416CEAA0400F0FF77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D85AE1716CEAA0300F0FF77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D85AE1816CEAA0300F0FF77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7D85AE3916CEAA0400F0FF77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D85AE3A16CEAA0400F0FF77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D85AE3F16CEAA0400F0FF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D85AE4016CEAA0400F0FF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D85AE4216CEAA0400F0FF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DNGraph/DNGraph-Prefix.pch";
+				INFOPLIST_FILE = "DNGraph/DNGraph-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7D85AE4316CEAA0400F0FF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DNGraph/DNGraph-Prefix.pch";
+				INFOPLIST_FILE = "DNGraph/DNGraph-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7D85AE4516CEAA0400F0FF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DNGraph.app/DNGraph";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DNGraph/DNGraph-Prefix.pch";
+				INFOPLIST_FILE = "DNGraphTests/DNGraphTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7D85AE4616CEAA0400F0FF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DNGraph.app/DNGraph";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DNGraph/DNGraph-Prefix.pch";
+				INFOPLIST_FILE = "DNGraphTests/DNGraphTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D85AE0416CEAA0300F0FF77 /* Build configuration list for PBXProject "DNGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D85AE3F16CEAA0400F0FF77 /* Debug */,
+				7D85AE4016CEAA0400F0FF77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D85AE4116CEAA0400F0FF77 /* Build configuration list for PBXNativeTarget "DNGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D85AE4216CEAA0400F0FF77 /* Debug */,
+				7D85AE4316CEAA0400F0FF77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7D85AE4416CEAA0400F0FF77 /* Build configuration list for PBXNativeTarget "DNGraphTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D85AE4516CEAA0400F0FF77 /* Debug */,
+				7D85AE4616CEAA0400F0FF77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7D85AE2616CEAA0300F0FF77 /* DNGraph.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7D85AE2716CEAA0300F0FF77 /* DNGraph.xcdatamodel */,
+			);
+			currentVersion = 7D85AE2716CEAA0300F0FF77 /* DNGraph.xcdatamodel */;
+			path = DNGraph.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7D85AE0116CEAA0300F0FF77 /* Project object */;
+}
