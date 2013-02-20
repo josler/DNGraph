@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DNSubject.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DNSubject</TokenIdentifier>
+			<Abstract type="html">A Subject node in the graph.</Abstract>
+			<DeclaredIn>DNSubject.h</DeclaredIn>
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNSubject/setRanker:</TokenIdentifier>
+			<Abstract type="html">The DNRanker that controls the ranking of a Node.</Abstract>
+			<DeclaredIn>DNSubject.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) DNRanker *ranker</Declaration>
+			
+			
+			<Anchor>//api/name/ranker</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNSubject/ranker</TokenIdentifier>
+			<Abstract type="html">The DNRanker that controls the ranking of a Node.</Abstract>
+			<DeclaredIn>DNSubject.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) DNRanker *ranker</Declaration>
+			
+			
+			<Anchor>//api/name/ranker</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DNSubject/ranker</TokenIdentifier>
+			<Abstract type="html">The DNRanker that controls the ranking of a Node.</Abstract>
+			<DeclaredIn>DNSubject.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) DNRanker *ranker</Declaration>
+			
+			
+			<Anchor>//api/name/ranker</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNSubject/setupWithId:andName:andCategory:</TokenIdentifier>
+			<Abstract type="html">Sets up the DNSubject with an ID, name and category.</Abstract>
+			<DeclaredIn>DNSubject.h</DeclaredIn>			
+			
+			<Declaration>- (void)setupWithId:(NSString *)facebookId andName:(NSString *)name andCategory:(NSString *)category</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>facebookId</Name>
+					<Abstract type="html">The ID provided by Facebook.</Abstract>
+				</Parameter><Parameter>
+					<Name>name</Name>
+					<Abstract type="html">The given name for a subject.</Abstract>
+				</Parameter><Parameter>
+					<Name>category</Name>
+					<Abstract type="html">The category of a subject (for example, &apos;photo&apos;).</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setupWithId:andName:andCategory:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+	</File>
+</Tokens>
