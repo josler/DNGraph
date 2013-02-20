@@ -12,6 +12,18 @@
 		
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/saveContext</TokenIdentifier>
+			<Abstract type="html">Saves the managed object context</Abstract>
+			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			
+			<Declaration>- (void)saveContext</Declaration>
+			
+			
+			<Anchor>//api/name/saveContext</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/makePersonWithId:andName:</TokenIdentifier>
 			<Abstract type="html">Provides a DNPerson node with the given ID.</Abstract>
 			<DeclaredIn>DNGraph.h</DeclaredIn>			

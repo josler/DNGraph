@@ -18,6 +18,11 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize managedObjectContext = __managedObjectContext;
 
+- (void)saveContext
+{
+    [self.managedObjectContext save:nil];
+}
+
 #pragma mark - Factory Methods
 
 - (DNSource *)makeSourceWithName: (NSString *)name

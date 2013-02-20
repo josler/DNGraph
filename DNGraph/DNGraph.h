@@ -15,6 +15,11 @@
  */
 @interface DNGraph : NSObject
 
+/**
+ Saves the managed object context
+ */
+- (void)saveContext;
+
 #pragma mark - Factory Methods
 
 /// ------------------------------------------
