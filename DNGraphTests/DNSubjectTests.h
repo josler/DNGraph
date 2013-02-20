@@ -1,18 +1,18 @@
 //
-//  DNGraphTests.h
-//  DNGraphTests
+//  DNSubjectTests.h
+//  DNGraph
 //
-//  Created by James Osler on 15/02/2013.
+//  Created by James Osler on 20/02/2013.
 //  Copyright (c) 2013 James Osler. All rights reserved.
 //
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@class DNGraph;
+@class DNSubject;
 
-@interface DNGraphTests : SenTestCase
+@interface DNSubjectTests : SenTestCase
 
-@property (nonatomic, strong) DNGraph *graph;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) DNSubject *testSubject;
 
 @end

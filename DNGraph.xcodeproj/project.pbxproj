@@ -6,7 +6,24 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		7D85AE4716CEAA3000F0FF77 /* mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7D85AE4816CEAA3000F0FF77 /* Build configuration list for PBXAggregateTarget "mogenerator" */;
+			buildPhases = (
+				7D85AE4B16CEAA3300F0FF77 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = mogenerator;
+			productName = mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		7D08E98416D5153E00C4EAC4 /* DNSubjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D08E98316D5153E00C4EAC4 /* DNSubjectTests.m */; };
+		7D08E98716D5164F00C4EAC4 /* DNRankerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D08E98616D5164E00C4EAC4 /* DNRankerTest.m */; };
+		7D59229416D03ABA00C7E517 /* DNSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D59229316D03ABA00C7E517 /* DNSourceTests.m */; };
 		7D85AE0D16CEAA0300F0FF77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D85AE0C16CEAA0300F0FF77 /* UIKit.framework */; };
 		7D85AE0F16CEAA0300F0FF77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D85AE0E16CEAA0300F0FF77 /* Foundation.framework */; };
 		7D85AE1116CEAA0300F0FF77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D85AE1016CEAA0300F0FF77 /* CoreGraphics.framework */; };
@@ -24,6 +41,15 @@
 		7D85AE3316CEAA0400F0FF77 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D85AE1216CEAA0300F0FF77 /* CoreData.framework */; };
 		7D85AE3B16CEAA0400F0FF77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D85AE3916CEAA0400F0FF77 /* InfoPlist.strings */; };
 		7D85AE3E16CEAA0400F0FF77 /* DNGraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE3D16CEAA0400F0FF77 /* DNGraphTests.m */; };
+		7D85AE5716CEAA8D00F0FF77 /* DNPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE5016CEAA8D00F0FF77 /* DNPerson.m */; };
+		7D85AE5816CEAA8D00F0FF77 /* DNRanker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE5216CEAA8D00F0FF77 /* DNRanker.m */; };
+		7D85AE5916CEAA8D00F0FF77 /* DNSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE5416CEAA8D00F0FF77 /* DNSource.m */; };
+		7D85AE5A16CEAA8D00F0FF77 /* DNSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE5616CEAA8D00F0FF77 /* DNSubject.m */; };
+		7D85AE6116CEAAA100F0FF77 /* _DNPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE5C16CEAAA100F0FF77 /* _DNPerson.m */; };
+		7D85AE6216CEAAA100F0FF77 /* _DNSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE5E16CEAAA100F0FF77 /* _DNSource.m */; };
+		7D85AE6316CEAAA100F0FF77 /* _DNSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE6016CEAAA100F0FF77 /* _DNSubject.m */; };
+		7D85AE6616CEAAB600F0FF77 /* DNGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE6516CEAAB600F0FF77 /* DNGraph.m */; };
+		7D85AE6916CEB5A500F0FF77 /* DNPersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE6816CEB5A500F0FF77 /* DNPersonTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +63,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D08E98216D5153E00C4EAC4 /* DNSubjectTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNSubjectTests.h; sourceTree = "<group>"; };
+		7D08E98316D5153E00C4EAC4 /* DNSubjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNSubjectTests.m; sourceTree = "<group>"; };
+		7D08E98516D5164E00C4EAC4 /* DNRankerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNRankerTest.h; sourceTree = "<group>"; };
+		7D08E98616D5164E00C4EAC4 /* DNRankerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNRankerTest.m; sourceTree = "<group>"; };
+		7D59229216D03ABA00C7E517 /* DNSourceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNSourceTests.h; sourceTree = "<group>"; };
+		7D59229316D03ABA00C7E517 /* DNSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNSourceTests.m; sourceTree = "<group>"; };
+		7D653BF216D5330400954C56 /* DNGraph_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNGraph_Private.h; sourceTree = "<group>"; };
 		7D85AE0916CEAA0300F0FF77 /* DNGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D85AE0C16CEAA0300F0FF77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7D85AE0E16CEAA0300F0FF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +91,25 @@
 		7D85AE3A16CEAA0400F0FF77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7D85AE3C16CEAA0400F0FF77 /* DNGraphTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNGraphTests.h; sourceTree = "<group>"; };
 		7D85AE3D16CEAA0400F0FF77 /* DNGraphTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNGraphTests.m; sourceTree = "<group>"; };
+		7D85AE4E16CEAA8D00F0FF77 /* DNNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNNode.h; sourceTree = "<group>"; };
+		7D85AE4F16CEAA8D00F0FF77 /* DNPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNPerson.h; sourceTree = "<group>"; };
+		7D85AE5016CEAA8D00F0FF77 /* DNPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNPerson.m; sourceTree = "<group>"; };
+		7D85AE5116CEAA8D00F0FF77 /* DNRanker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNRanker.h; sourceTree = "<group>"; };
+		7D85AE5216CEAA8D00F0FF77 /* DNRanker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNRanker.m; sourceTree = "<group>"; };
+		7D85AE5316CEAA8D00F0FF77 /* DNSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNSource.h; sourceTree = "<group>"; };
+		7D85AE5416CEAA8D00F0FF77 /* DNSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNSource.m; sourceTree = "<group>"; };
+		7D85AE5516CEAA8D00F0FF77 /* DNSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNSubject.h; sourceTree = "<group>"; };
+		7D85AE5616CEAA8D00F0FF77 /* DNSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNSubject.m; sourceTree = "<group>"; };
+		7D85AE5B16CEAAA100F0FF77 /* _DNPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DNPerson.h; sourceTree = "<group>"; };
+		7D85AE5C16CEAAA100F0FF77 /* _DNPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DNPerson.m; sourceTree = "<group>"; };
+		7D85AE5D16CEAAA100F0FF77 /* _DNSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DNSource.h; sourceTree = "<group>"; };
+		7D85AE5E16CEAAA100F0FF77 /* _DNSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DNSource.m; sourceTree = "<group>"; };
+		7D85AE5F16CEAAA100F0FF77 /* _DNSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DNSubject.h; sourceTree = "<group>"; };
+		7D85AE6016CEAAA100F0FF77 /* _DNSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DNSubject.m; sourceTree = "<group>"; };
+		7D85AE6416CEAAB600F0FF77 /* DNGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNGraph.h; sourceTree = "<group>"; };
+		7D85AE6516CEAAB600F0FF77 /* DNGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNGraph.m; sourceTree = "<group>"; };
+		7D85AE6716CEB5A500F0FF77 /* DNPersonTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNPersonTests.h; sourceTree = "<group>"; };
+		7D85AE6816CEB5A500F0FF77 /* DNPersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNPersonTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +172,11 @@
 		7D85AE1416CEAA0300F0FF77 /* DNGraph */ = {
 			isa = PBXGroup;
 			children = (
+				7D85AE4C16CEAA3E00F0FF77 /* model */,
 				7D85AE1D16CEAA0300F0FF77 /* DNAppDelegate.h */,
+				7D85AE6416CEAAB600F0FF77 /* DNGraph.h */,
+				7D653BF216D5330400954C56 /* DNGraph_Private.h */,
+				7D85AE6516CEAAB600F0FF77 /* DNGraph.m */,
 				7D85AE1E16CEAA0300F0FF77 /* DNAppDelegate.m */,
 				7D85AE2616CEAA0300F0FF77 /* DNGraph.xcdatamodeld */,
 				7D85AE1516CEAA0300F0FF77 /* Supporting Files */,
@@ -147,6 +203,14 @@
 			children = (
 				7D85AE3C16CEAA0400F0FF77 /* DNGraphTests.h */,
 				7D85AE3D16CEAA0400F0FF77 /* DNGraphTests.m */,
+				7D08E98516D5164E00C4EAC4 /* DNRankerTest.h */,
+				7D08E98616D5164E00C4EAC4 /* DNRankerTest.m */,
+				7D85AE6716CEB5A500F0FF77 /* DNPersonTests.h */,
+				7D85AE6816CEB5A500F0FF77 /* DNPersonTests.m */,
+				7D59229216D03ABA00C7E517 /* DNSourceTests.h */,
+				7D59229316D03ABA00C7E517 /* DNSourceTests.m */,
+				7D08E98216D5153E00C4EAC4 /* DNSubjectTests.h */,
+				7D08E98316D5153E00C4EAC4 /* DNSubjectTests.m */,
 				7D85AE3716CEAA0400F0FF77 /* Supporting Files */,
 			);
 			path = DNGraphTests;
@@ -159,6 +223,36 @@
 				7D85AE3916CEAA0400F0FF77 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D85AE4C16CEAA3E00F0FF77 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7D85AE4E16CEAA8D00F0FF77 /* DNNode.h */,
+				7D85AE4F16CEAA8D00F0FF77 /* DNPerson.h */,
+				7D85AE5016CEAA8D00F0FF77 /* DNPerson.m */,
+				7D85AE5116CEAA8D00F0FF77 /* DNRanker.h */,
+				7D85AE5216CEAA8D00F0FF77 /* DNRanker.m */,
+				7D85AE5316CEAA8D00F0FF77 /* DNSource.h */,
+				7D85AE5416CEAA8D00F0FF77 /* DNSource.m */,
+				7D85AE5516CEAA8D00F0FF77 /* DNSubject.h */,
+				7D85AE5616CEAA8D00F0FF77 /* DNSubject.m */,
+				7D85AE4D16CEAA4400F0FF77 /* machine */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7D85AE4D16CEAA4400F0FF77 /* machine */ = {
+			isa = PBXGroup;
+			children = (
+				7D85AE5B16CEAAA100F0FF77 /* _DNPerson.h */,
+				7D85AE5C16CEAAA100F0FF77 /* _DNPerson.m */,
+				7D85AE5D16CEAAA100F0FF77 /* _DNSource.h */,
+				7D85AE5E16CEAAA100F0FF77 /* _DNSource.m */,
+				7D85AE5F16CEAAA100F0FF77 /* _DNSubject.h */,
+				7D85AE6016CEAAA100F0FF77 /* _DNSubject.m */,
+			);
+			path = machine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +318,7 @@
 			targets = (
 				7D85AE0816CEAA0300F0FF77 /* DNGraph */,
 				7D85AE2D16CEAA0400F0FF77 /* DNGraphTests */,
+				7D85AE4716CEAA3000F0FF77 /* mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -264,6 +359,19 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		7D85AE4B16CEAA3300F0FF77 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd DNGraph\nmogenerator -m \"DNGraph.xcdatamodeld/DNGraph.xcdatamodel/\" --machine-dir \"model/machine\" --human-dir \"model/\" --template-var arc=true";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -274,6 +382,14 @@
 				7D85AE1B16CEAA0300F0FF77 /* main.m in Sources */,
 				7D85AE1F16CEAA0300F0FF77 /* DNAppDelegate.m in Sources */,
 				7D85AE2816CEAA0300F0FF77 /* DNGraph.xcdatamodeld in Sources */,
+				7D85AE5716CEAA8D00F0FF77 /* DNPerson.m in Sources */,
+				7D85AE5816CEAA8D00F0FF77 /* DNRanker.m in Sources */,
+				7D85AE5916CEAA8D00F0FF77 /* DNSource.m in Sources */,
+				7D85AE5A16CEAA8D00F0FF77 /* DNSubject.m in Sources */,
+				7D85AE6116CEAAA100F0FF77 /* _DNPerson.m in Sources */,
+				7D85AE6216CEAAA100F0FF77 /* _DNSource.m in Sources */,
+				7D85AE6316CEAAA100F0FF77 /* _DNSubject.m in Sources */,
+				7D85AE6616CEAAB600F0FF77 /* DNGraph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +398,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D85AE3E16CEAA0400F0FF77 /* DNGraphTests.m in Sources */,
+				7D85AE6916CEB5A500F0FF77 /* DNPersonTests.m in Sources */,
+				7D59229416D03ABA00C7E517 /* DNSourceTests.m in Sources */,
+				7D08E98416D5153E00C4EAC4 /* DNSubjectTests.m in Sources */,
+				7D08E98716D5164F00C4EAC4 /* DNRankerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +549,20 @@
 			};
 			name = Release;
 		};
+		7D85AE4916CEAA3000F0FF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7D85AE4A16CEAA3000F0FF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -448,6 +582,7 @@
 				7D85AE4316CEAA0400F0FF77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D85AE4416CEAA0400F0FF77 /* Build configuration list for PBXNativeTarget "DNGraphTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +591,16 @@
 				7D85AE4616CEAA0400F0FF77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D85AE4816CEAA3000F0FF77 /* Build configuration list for PBXAggregateTarget "mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D85AE4916CEAA3000F0FF77 /* Debug */,
+				7D85AE4A16CEAA3000F0FF77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
