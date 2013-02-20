@@ -20,7 +20,10 @@
 
 - (void)saveContext
 {
-    [self.managedObjectContext save:nil];
+    NSError *error;
+    [self.managedObjectContext save:&error];
+    if (error)
+        NSLog(@"error saving context");
 }
 
 #pragma mark - Factory Methods
