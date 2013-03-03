@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class DNPerson, DNSource, DNSubject;
+@class DNPerson, DNSource, DNSubject, DNArticle;
 
 /**
  Handles interaction with the Graph.
@@ -59,6 +59,7 @@
  */
 - (DNSource *)makeSourceWithName: (NSString *)name;
 
+- (DNArticle *)makeArticleWithSubject: (DNSubject *)subject Source: (DNSource *)source Author:(DNPerson *)author andHash:(NSString *)hashValue;
 
 #pragma mark - Core Data Stack
 

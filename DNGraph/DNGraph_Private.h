@@ -11,7 +11,8 @@
 
 @interface DNGraph ()
 
-- (id <DNNode>)getExistingNodeOfType: (NSString *)entityName withId: (NSString *)facebookId;
 - (NSArray *)fetchNodesOfType: (NSString *)entityName WithId: (NSString *)facebookId;
+- (DNArticle *)getExistingArticleWithHash: (NSString *)hashValue;
+- (id <DNNode>)getExistingNodeOfType: (NSString *)entityName withId: (NSString *)facebookId;
 
 @end

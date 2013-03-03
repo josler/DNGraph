@@ -11,6 +11,7 @@
 #import "DNSource.h"
 #import "DNPerson.h"
 #import "DNSubject.h"
+#import "DNArticle.h"
 #import "DNGraph_Private.h"
 
 @implementation DNGraphTests
@@ -67,6 +68,35 @@
     [person like];
     person = [self.graph makePersonWithId:@"someId" andName:@"somename"];
     STAssertFalse(person.ranking == 0.5f, @"Should return the previously created person");
+}
+
+- (void)testMakeArticleWithSubjectSourceAuthorAndHash {
+    DNPerson *person = [self.graph makePersonWithId:@"someId" andName:@"somename"];
+    DNSubject *subject = [self.graph makeSubjectWithId:@"someId" andName:@"somename" andCategory:@"somecategory"];
+    DNSource *source = [self.graph makeSourceWithName:@"somename"];
+    DNArticle *article = [self.graph makeArticleWithSubject:subject Source:source Author:person andHash:@"somehash"];
+    STAssertEquals(article.hashValue, @"somehash", @"Should return a article with the given hash");
+    [article setComments:@"somecomments" withPeople:nil];
+    STAssertTrue(article.comments != nil, @"modified article");
+    article = [self.graph makeArticleWithSubject:subject Source:source Author:person andHash:@"somehash"];
+    STAssertFalse(article.comments == nil, @"Should return previously created (and modified) article");
+}
+
+- (void)testGetExistingArticleWithHashNoResult
+{
+    DNArticle *article = [self.graph getExistingArticleWithHash:@"hash"];
+    STAssertNil(article, @"no result returned");
+}
+
+- (void)testGetExistingArticleWithHash
+{
+    DNPerson *person = [self.graph makePersonWithId:@"someId" andName:@"somename"];
+    DNSubject *subject = [self.graph makeSubjectWithId:@"someId" andName:@"somename" andCategory:@"somecategory"];
+    DNSource *source = [self.graph makeSourceWithName:@"somename"];
+
+    [self.graph makeArticleWithSubject:subject Source:source Author:person andHash:@"hash"];
+    DNArticle *article = [self.graph makeArticleWithSubject:subject Source:source Author:person andHash:@"hash"];
+    STAssertEquals(article.hashValue, @"hash", @"returns existing article");
 }
 
 - (void)testGetExistingNodeOfTypeNoResult

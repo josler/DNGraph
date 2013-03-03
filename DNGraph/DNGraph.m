@@ -11,6 +11,7 @@
 #import "DNPerson.h"
 #import "DNSubject.h"
 #import "DNSource.h"
+#import "DNArticle.h"
 
 @implementation DNGraph
 
@@ -58,7 +59,39 @@
     return person;
 }
 
+- (DNArticle *)makeArticleWithSubject: (DNSubject *)subject Source: (DNSource *)source Author:(DNPerson *)author andHash:(NSString *)hashValue
+{
+    DNArticle *article = [self getExistingArticleWithHash:hashValue];
+    if (article) return article;
+    article = [DNArticle insertInManagedObjectContext:self.managedObjectContext];
+    [article setupWithSubject:subject Source:source andAuthor:author];
+    article.hashValue = hashValue;
+    return article;
+}
+
 #pragma mark - Core Data Fetching
+
+- (DNArticle *)getExistingArticleWithHash: (NSString *)hashValue
+{
+    NSManagedObjectContext *moc = self.managedObjectContext;
+    NSEntityDescription *entityDescription = [NSEntityDescription
+                                              entityForName:@"DNArticle" inManagedObjectContext:moc];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:
+                              @"(hashValue = %@)", hashValue];
+    [request setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *array = [moc executeFetchRequest:request error:&error];
+    if (array == nil)
+    {
+        // Deal with error...
+    }
+    if (array.count > 0) return [array objectAtIndex:0];
+    return nil;
+}
 
 - (id <DNNode>)getExistingNodeOfType: (NSString *)entityName withId: (NSString *)facebookId
 {

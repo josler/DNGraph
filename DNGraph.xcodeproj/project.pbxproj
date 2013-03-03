@@ -50,6 +50,9 @@
 		7D85AE6316CEAAA100F0FF77 /* _DNSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE6016CEAAA100F0FF77 /* _DNSubject.m */; };
 		7D85AE6616CEAAB600F0FF77 /* DNGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE6516CEAAB600F0FF77 /* DNGraph.m */; };
 		7D85AE6916CEB5A500F0FF77 /* DNPersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D85AE6816CEB5A500F0FF77 /* DNPersonTests.m */; };
+		FC2A89CC16E382B50052A5BB /* DNArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2A89CB16E382B50052A5BB /* DNArticle.m */; };
+		FC2A89CF16E382C00052A5BB /* _DNArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2A89CE16E382C00052A5BB /* _DNArticle.m */; };
+		FC2A89D216E3916C0052A5BB /* DNArticleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2A89D116E3916C0052A5BB /* DNArticleTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,12 @@
 		7D85AE6516CEAAB600F0FF77 /* DNGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNGraph.m; sourceTree = "<group>"; };
 		7D85AE6716CEB5A500F0FF77 /* DNPersonTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNPersonTests.h; sourceTree = "<group>"; };
 		7D85AE6816CEB5A500F0FF77 /* DNPersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNPersonTests.m; sourceTree = "<group>"; };
+		FC2A89CA16E382B50052A5BB /* DNArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNArticle.h; sourceTree = "<group>"; };
+		FC2A89CB16E382B50052A5BB /* DNArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNArticle.m; sourceTree = "<group>"; };
+		FC2A89CD16E382C00052A5BB /* _DNArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DNArticle.h; sourceTree = "<group>"; };
+		FC2A89CE16E382C00052A5BB /* _DNArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DNArticle.m; sourceTree = "<group>"; };
+		FC2A89D016E3916C0052A5BB /* DNArticleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNArticleTests.h; sourceTree = "<group>"; };
+		FC2A89D116E3916C0052A5BB /* DNArticleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNArticleTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +218,8 @@
 				7D85AE6816CEB5A500F0FF77 /* DNPersonTests.m */,
 				7D59229216D03ABA00C7E517 /* DNSourceTests.h */,
 				7D59229316D03ABA00C7E517 /* DNSourceTests.m */,
+				FC2A89D016E3916C0052A5BB /* DNArticleTests.h */,
+				FC2A89D116E3916C0052A5BB /* DNArticleTests.m */,
 				7D08E98216D5153E00C4EAC4 /* DNSubjectTests.h */,
 				7D08E98316D5153E00C4EAC4 /* DNSubjectTests.m */,
 				7D85AE3716CEAA0400F0FF77 /* Supporting Files */,
@@ -228,6 +239,8 @@
 		7D85AE4C16CEAA3E00F0FF77 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				FC2A89CA16E382B50052A5BB /* DNArticle.h */,
+				FC2A89CB16E382B50052A5BB /* DNArticle.m */,
 				7D85AE4E16CEAA8D00F0FF77 /* DNNode.h */,
 				7D85AE4F16CEAA8D00F0FF77 /* DNPerson.h */,
 				7D85AE5016CEAA8D00F0FF77 /* DNPerson.m */,
@@ -245,6 +258,8 @@
 		7D85AE4D16CEAA4400F0FF77 /* machine */ = {
 			isa = PBXGroup;
 			children = (
+				FC2A89CD16E382C00052A5BB /* _DNArticle.h */,
+				FC2A89CE16E382C00052A5BB /* _DNArticle.m */,
 				7D85AE5B16CEAAA100F0FF77 /* _DNPerson.h */,
 				7D85AE5C16CEAAA100F0FF77 /* _DNPerson.m */,
 				7D85AE5D16CEAAA100F0FF77 /* _DNSource.h */,
@@ -390,6 +405,8 @@
 				7D85AE6216CEAAA100F0FF77 /* _DNSource.m in Sources */,
 				7D85AE6316CEAAA100F0FF77 /* _DNSubject.m in Sources */,
 				7D85AE6616CEAAB600F0FF77 /* DNGraph.m in Sources */,
+				FC2A89CC16E382B50052A5BB /* DNArticle.m in Sources */,
+				FC2A89CF16E382C00052A5BB /* _DNArticle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +419,7 @@
 				7D59229416D03ABA00C7E517 /* DNSourceTests.m in Sources */,
 				7D08E98416D5153E00C4EAC4 /* DNSubjectTests.m in Sources */,
 				7D08E98716D5164F00C4EAC4 /* DNRankerTest.m in Sources */,
+				FC2A89D216E3916C0052A5BB /* DNArticleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
