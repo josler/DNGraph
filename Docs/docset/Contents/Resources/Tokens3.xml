@@ -1,102 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DNRanker.html">
+	<File path="Classes/DNPerson.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DNRanker</TokenIdentifier>
-			<Abstract type="html">Controls the ranking behaviour of a particular Node</Abstract>
-			<DeclaredIn>DNRanker.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/DNPerson</TokenIdentifier>
+			<Abstract type="html">A person node in the graph.</Abstract>
+			<DeclaredIn>DNPerson.h</DeclaredIn>
 			
 			<NodeRef refid="3"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNRanker/setDelegate:</TokenIdentifier>
-			<Abstract type="html">The Node that the object controls the ranking of.</Abstract>
-			<DeclaredIn>DNRanker.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/DNPerson/setupWithId:andName:</TokenIdentifier>
+			<Abstract type="html">Sets up a Person node given an ID and a name.</Abstract>
+			<DeclaredIn>DNPerson.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, strong) id&lt;DNNode&gt; delegate</Declaration>
-			
-			
-			<Anchor>//api/name/delegate</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNRanker/delegate</TokenIdentifier>
-			<Abstract type="html">The Node that the object controls the ranking of.</Abstract>
-			<DeclaredIn>DNRanker.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) id&lt;DNNode&gt; delegate</Declaration>
-			
-			
-			<Anchor>//api/name/delegate</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DNRanker/delegate</TokenIdentifier>
-			<Abstract type="html">The Node that the object controls the ranking of.</Abstract>
-			<DeclaredIn>DNRanker.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) id&lt;DNNode&gt; delegate</Declaration>
-			
-			
-			<Anchor>//api/name/delegate</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNRanker/initWithDelgate:</TokenIdentifier>
-			<Abstract type="html">Initialize an object with a given Node delegate</Abstract>
-			<DeclaredIn>DNRanker.h</DeclaredIn>			
-			
-			<Declaration>- (id)initWithDelgate:(id&lt;DNNode&gt;)delegate</Declaration>
+			<Declaration>- (void)setupWithId:(NSString *)facebookId andName:(NSString *)name</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>delegate</Name>
-					<Abstract type="html">The Delegate to control the ranking of, conforms to DNNode protocol.</Abstract>
+					<Name>facebookId</Name>
+					<Abstract type="html">The ID for the Person (from Facebook feed)</Abstract>
+				</Parameter><Parameter>
+					<Name>name</Name>
+					<Abstract type="html">The name of the person</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/initWithDelgate:</Anchor>
+			<Anchor>//api/name/setupWithId:andName:</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNRanker/like</TokenIdentifier>
-			<Abstract type="html">Like, increasing it&apos;s ranking.</Abstract>
-			<DeclaredIn>DNRanker.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/DNPerson/setRanker:</TokenIdentifier>
+			<Abstract type="html">The DNRanker that controls the ranking of a Node.</Abstract>
+			<DeclaredIn>DNPerson.h</DeclaredIn>			
 			
-			<Declaration>- (void)like</Declaration>
+			<Declaration>@property (nonatomic, strong) DNRanker *ranker</Declaration>
 			
 			
-			<Anchor>//api/name/like</Anchor>
+			<Anchor>//api/name/ranker</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNRanker/dislike</TokenIdentifier>
-			<Abstract type="html">Dislike, decreasing it&apos;s ranking.</Abstract>
-			<DeclaredIn>DNRanker.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/DNPerson/ranker</TokenIdentifier>
+			<Abstract type="html">The DNRanker that controls the ranking of a Node.</Abstract>
+			<DeclaredIn>DNPerson.h</DeclaredIn>			
 			
-			<Declaration>- (void)dislike</Declaration>
+			<Declaration>@property (nonatomic, strong) DNRanker *ranker</Declaration>
 			
 			
-			<Anchor>//api/name/dislike</Anchor>
+			<Anchor>//api/name/ranker</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNRanker/resetRanking</TokenIdentifier>
-			<Abstract type="html">Resets the ranking to default value.</Abstract>
-			<DeclaredIn>DNRanker.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/DNPerson/ranker</TokenIdentifier>
+			<Abstract type="html">The DNRanker that controls the ranking of a Node.</Abstract>
+			<DeclaredIn>DNPerson.h</DeclaredIn>			
 			
-			<Declaration>- (void)resetRanking</Declaration>
+			<Declaration>@property (nonatomic, strong) DNRanker *ranker</Declaration>
 			
 			
-			<Anchor>//api/name/resetRanking</Anchor>
+			<Anchor>//api/name/ranker</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		

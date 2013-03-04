@@ -1,69 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DNPerson.html">
+	<File path="Classes/DNGraph.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DNPerson</TokenIdentifier>
-			<Abstract type="html">A person node in the graph.</Abstract>
-			<DeclaredIn>DNPerson.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/DNGraph</TokenIdentifier>
+			<Abstract type="html">Handles interaction with the Graph.</Abstract>
+			<DeclaredIn>DNGraph.h</DeclaredIn>
 			
 			<NodeRef refid="2"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNPerson/setupWithId:andName:</TokenIdentifier>
-			<Abstract type="html">Sets up a Person node given an ID and a name.</Abstract>
-			<DeclaredIn>DNPerson.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/saveContext</TokenIdentifier>
+			<Abstract type="html">Saves the managed object context</Abstract>
+			<DeclaredIn>DNGraph.h</DeclaredIn>			
 			
-			<Declaration>- (void)setupWithId:(NSString *)facebookId andName:(NSString *)name</Declaration>
+			<Declaration>- (void)saveContext</Declaration>
+			
+			
+			<Anchor>//api/name/saveContext</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/makePersonWithId:andName:</TokenIdentifier>
+			<Abstract type="html">Provides a DNPerson node with the given ID.</Abstract>
+			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			
+			<Declaration>- (DNPerson *)makePersonWithId:(NSString *)facebookId andName:(NSString *)name</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>facebookId</Name>
-					<Abstract type="html">The ID for the Person (from Facebook feed)</Abstract>
+					<Abstract type="html">An ID provided by Facebook Stream.</Abstract>
 				</Parameter><Parameter>
 					<Name>name</Name>
-					<Abstract type="html">The name of the person</Abstract>
+					<Abstract type="html">The name for the person.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A DNPerson matching the ID given.</Abstract></ReturnValue>
+			<Anchor>//api/name/makePersonWithId:andName:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/makeSubjectWithId:andName:andCategory:</TokenIdentifier>
+			<Abstract type="html">Returns a DNSubject node with the given ID.</Abstract>
+			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			
+			<Declaration>- (DNSubject *)makeSubjectWithId:(NSString *)facebookId andName:(NSString *)name andCategory:(NSString *)category</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>facebookId</Name>
+					<Abstract type="html">An ID provided by Facebook Stream.</Abstract>
+				</Parameter><Parameter>
+					<Name>name</Name>
+					<Abstract type="html">The name for the subject.</Abstract>
+				</Parameter><Parameter>
+					<Name>category</Name>
+					<Abstract type="html">The category for the subject.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A DNSubject matching the ID given.</Abstract></ReturnValue>
+			<Anchor>//api/name/makeSubjectWithId:andName:andCategory:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/makeSourceWithName:</TokenIdentifier>
+			<Abstract type="html">Returns a DNSource node with the given ID.</Abstract>
+			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			
+			<Declaration>- (DNSource *)makeSourceWithName:(NSString *)name</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>name</Name>
+					<Abstract type="html">The name for the source.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A DNSource matching the ID given.</Abstract></ReturnValue>
+			<Anchor>//api/name/makeSourceWithName:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/makeArticleWithSubject:Source:Author:andHash:</TokenIdentifier>
+			<Abstract type="html">Returns an Article with given DNSubject, DNSource and DNPerson, matching the hash.</Abstract>
+			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			
+			<Declaration>- (DNArticle *)makeArticleWithSubject:(DNSubject *)subject Source:(DNSource *)source Author:(DNPerson *)author andHash:(NSString *)hashValue</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>subject</Name>
+					<Abstract type="html">The DNSubject for the article.</Abstract>
+				</Parameter><Parameter>
+					<Name>source</Name>
+					<Abstract type="html">The DNSource for the article.</Abstract>
+				</Parameter><Parameter>
+					<Name>author</Name>
+					<Abstract type="html">The DNPerson (author) of the article.</Abstract>
+				</Parameter><Parameter>
+					<Name>hashValue</Name>
+					<Abstract type="html">A hash value used to determine uniqueness.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/setupWithId:andName:</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNPerson/setRanker:</TokenIdentifier>
-			<Abstract type="html">The DNRanker that controls the ranking of a Node.</Abstract>
-			<DeclaredIn>DNPerson.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) DNRanker *ranker</Declaration>
-			
-			
-			<Anchor>//api/name/ranker</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNPerson/ranker</TokenIdentifier>
-			<Abstract type="html">The DNRanker that controls the ranking of a Node.</Abstract>
-			<DeclaredIn>DNPerson.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) DNRanker *ranker</Declaration>
-			
-			
-			<Anchor>//api/name/ranker</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DNPerson/ranker</TokenIdentifier>
-			<Abstract type="html">The DNRanker that controls the ranking of a Node.</Abstract>
-			<DeclaredIn>DNPerson.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, strong) DNRanker *ranker</Declaration>
-			
-			
-			<Anchor>//api/name/ranker</Anchor>
+			<Anchor>//api/name/makeArticleWithSubject:Source:Author:andHash:</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		

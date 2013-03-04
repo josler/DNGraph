@@ -16,6 +16,7 @@
 						<NodeRef refid="3"/>
 						<NodeRef refid="4"/>
 						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
 						
 					</Subnodes>
 				</Node>
@@ -26,7 +27,7 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
 						
 					</Subnodes>
 				</Node>
@@ -37,28 +38,32 @@
 	<Library>
 		
 		<Node id="1">
+			<Name>DNArticle</Name>
+			<Path>Classes/DNArticle.html</Path>
+		</Node>
+		<Node id="2">
 			<Name>DNGraph</Name>
 			<Path>Classes/DNGraph.html</Path>
 		</Node>
-		<Node id="2">
+		<Node id="3">
 			<Name>DNPerson</Name>
 			<Path>Classes/DNPerson.html</Path>
 		</Node>
-		<Node id="3">
+		<Node id="4">
 			<Name>DNRanker</Name>
 			<Path>Classes/DNRanker.html</Path>
 		</Node>
-		<Node id="4">
+		<Node id="5">
 			<Name>DNSource</Name>
 			<Path>Classes/DNSource.html</Path>
 		</Node>
-		<Node id="5">
+		<Node id="6">
 			<Name>DNSubject</Name>
 			<Path>Classes/DNSubject.html</Path>
 		</Node>
 		
 		
-		<Node id="6">
+		<Node id="7">
 			<Name>DNNode</Name>
 			<Path>Protocols/DNNode.html</Path>
 		</Node>

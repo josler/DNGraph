@@ -1,85 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DNGraph.html">
+	<File path="Classes/DNArticle.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DNGraph</TokenIdentifier>
-			<Abstract type="html">Handles interaction with the Graph.</Abstract>
-			<DeclaredIn>DNGraph.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/DNArticle</TokenIdentifier>
+			<Abstract type="html">Defines an article composed of several nodes, and content added to it.</Abstract>
+			<DeclaredIn>DNArticle.h</DeclaredIn>
 			
 			<NodeRef refid="1"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/saveContext</TokenIdentifier>
-			<Abstract type="html">Saves the managed object context</Abstract>
-			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/DNArticle/setWeightedRank:</TokenIdentifier>
+			<Abstract type="html">The euclidian weighted rank from component nodes. Has to be set with setWeightedRankWithMeanRank:andMinimumNodes: first.</Abstract>
+			<DeclaredIn>DNArticle.h</DeclaredIn>			
 			
-			<Declaration>- (void)saveContext</Declaration>
+			<Declaration>@property (nonatomic) float weightedRank</Declaration>
 			
 			
-			<Anchor>//api/name/saveContext</Anchor>
+			<Anchor>//api/name/weightedRank</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/makePersonWithId:andName:</TokenIdentifier>
-			<Abstract type="html">Provides a DNPerson node with the given ID.</Abstract>
-			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/DNArticle/weightedRank</TokenIdentifier>
+			<Abstract type="html">The euclidian weighted rank from component nodes. Has to be set with setWeightedRankWithMeanRank:andMinimumNodes: first.</Abstract>
+			<DeclaredIn>DNArticle.h</DeclaredIn>			
 			
-			<Declaration>- (DNPerson *)makePersonWithId:(NSString *)facebookId andName:(NSString *)name</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>facebookId</Name>
-					<Abstract type="html">An ID provided by Facebook Stream.</Abstract>
-				</Parameter><Parameter>
-					<Name>name</Name>
-					<Abstract type="html">The name for the person.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">A DNPerson matching the ID given.</Abstract></ReturnValue>
-			<Anchor>//api/name/makePersonWithId:andName:</Anchor>
+			<Declaration>@property (nonatomic) float weightedRank</Declaration>
+			
+			
+			<Anchor>//api/name/weightedRank</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/makeSubjectWithId:andName:andCategory:</TokenIdentifier>
-			<Abstract type="html">Returns a DNSubject node with the given ID.</Abstract>
-			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/DNArticle/weightedRank</TokenIdentifier>
+			<Abstract type="html">The euclidian weighted rank from component nodes. Has to be set with setWeightedRankWithMeanRank:andMinimumNodes: first.</Abstract>
+			<DeclaredIn>DNArticle.h</DeclaredIn>			
 			
-			<Declaration>- (DNSubject *)makeSubjectWithId:(NSString *)facebookId andName:(NSString *)name andCategory:(NSString *)category</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>facebookId</Name>
-					<Abstract type="html">An ID provided by Facebook Stream.</Abstract>
-				</Parameter><Parameter>
-					<Name>name</Name>
-					<Abstract type="html">The name for the subject.</Abstract>
-				</Parameter><Parameter>
-					<Name>category</Name>
-					<Abstract type="html">The category for the subject.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">A DNSubject matching the ID given.</Abstract></ReturnValue>
-			<Anchor>//api/name/makeSubjectWithId:andName:andCategory:</Anchor>
+			<Declaration>@property (nonatomic) float weightedRank</Declaration>
+			
+			
+			<Anchor>//api/name/weightedRank</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/makeSourceWithName:</TokenIdentifier>
-			<Abstract type="html">Returns a DNSource node with the given ID.</Abstract>
-			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/DNArticle/setupWithSubject:Source:andAuthor:</TokenIdentifier>
+			<Abstract type="html">Sets up the DNArticle with a given DNSubject, DNSource and DNPerson.</Abstract>
+			<DeclaredIn>DNArticle.h</DeclaredIn>			
 			
-			<Declaration>- (DNSource *)makeSourceWithName:(NSString *)name</Declaration>
+			<Declaration>- (void)setupWithSubject:(DNSubject *)subject Source:(DNSource *)source andAuthor:(DNPerson *)author</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>name</Name>
-					<Abstract type="html">The name for the source.</Abstract>
+					<Name>subject</Name>
+					<Abstract type="html">The DNSubject for the article.</Abstract>
+				</Parameter><Parameter>
+					<Name>source</Name>
+					<Abstract type="html">The DNSource for the article.</Abstract>
+				</Parameter><Parameter>
+					<Name>author</Name>
+					<Abstract type="html">The DNPerson (author) of the article.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">A DNSource matching the ID given.</Abstract></ReturnValue>
-			<Anchor>//api/name/makeSourceWithName:</Anchor>
+			
+			<Anchor>//api/name/setupWithSubject:Source:andAuthor:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNArticle/setComments:withPeople:</TokenIdentifier>
+			<Abstract type="html">Adds comments to an article, from the people who made them. This affects the ranking.</Abstract>
+			<DeclaredIn>DNArticle.h</DeclaredIn>			
+			
+			<Declaration>- (void)setComments:(NSString *)comments withPeople:(NSArray *)people</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>comments</Name>
+					<Abstract type="html">The string to be displayed for comments.</Abstract>
+				</Parameter><Parameter>
+					<Name>people</Name>
+					<Abstract type="html">The people who made the comments (NSArray of DNPerson.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setComments:withPeople:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNArticle/setWeightedRankWithMeanRank:andMinimumNodes:</TokenIdentifier>
+			<Abstract type="html">Sets the weighted rank for this article in comparison to the others, using the mean rank and minimum nodes.</Abstract>
+			<DeclaredIn>DNArticle.h</DeclaredIn>			
+			
+			<Declaration>- (void)setWeightedRankWithMeanRank:(float)meanRank andMinimumNodes:(float)minimumNodes</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>meanRank</Name>
+					<Abstract type="html">The mean rank of all articles in the system.</Abstract>
+				</Parameter><Parameter>
+					<Name>minimumNodes</Name>
+					<Abstract type="html">How many nodes must an article have to be eligible for ranking (suggested value of 2).</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setWeightedRankWithMeanRank:andMinimumNodes:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNArticle/getOverallRanking</TokenIdentifier>
+			<Abstract type="html">Gets the overall (non-weighted) ranking for this DNArticle, based on component nodes.</Abstract>
+			<DeclaredIn>DNArticle.h</DeclaredIn>			
+			
+			<Declaration>- (float)getOverallRanking</Declaration>
+			
+			<ReturnValue><Abstract type="html">The overall ranking (mean) for the DNArticle (non-weighted).</Abstract></ReturnValue>
+			<Anchor>//api/name/getOverallRanking</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		

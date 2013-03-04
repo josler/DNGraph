@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/DNNode.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/DNNode</TokenIdentifier>
+			<Abstract type="html">Protocol defining requirements for a Node in the Knowledge Graph</Abstract>
+			<DeclaredIn>DNNode.h</DeclaredIn>
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DNNode/like</TokenIdentifier>
+			<Abstract type="html">Like the node, increasing it&apos;s ranking.</Abstract>
+			<DeclaredIn>DNNode.h</DeclaredIn>			
+			
+			<Declaration>- (void)like</Declaration>
+			
+			
+			<Anchor>//api/name/like</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DNNode/dislike</TokenIdentifier>
+			<Abstract type="html">Dislike the node, decreasing it&apos;s ranking.</Abstract>
+			<DeclaredIn>DNNode.h</DeclaredIn>			
+			
+			<Declaration>- (void)dislike</Declaration>
+			
+			
+			<Anchor>//api/name/dislike</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DNNode/resetRanking</TokenIdentifier>
+			<Abstract type="html">Reset the ranking for a particular node</Abstract>
+			<DeclaredIn>DNNode.h</DeclaredIn>			
+			
+			<Declaration>- (void)resetRanking</Declaration>
+			
+			
+			<Anchor>//api/name/resetRanking</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DNNode/getId</TokenIdentifier>
+			<Abstract type="html">Get the ID of the node. Provided for legacy reasons.</Abstract>
+			<DeclaredIn>DNNode.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)getId</Declaration>
+			
+			<ReturnValue><Abstract type="html">the ID.</Abstract></ReturnValue>
+			<Anchor>//api/name/getId</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DNNode/setRanking:</TokenIdentifier>
+			<Abstract type="html">ID Property of the node.</Abstract>
+			<DeclaredIn>DNNode.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) float ranking</Declaration>
+			
+			
+			<Anchor>//api/name/ranking</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DNNode/ranking</TokenIdentifier>
+			<Abstract type="html">ID Property of the node.</Abstract>
+			<DeclaredIn>DNNode.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) float ranking</Declaration>
+			
+			
+			<Anchor>//api/name/ranking</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/DNNode/ranking</TokenIdentifier>
+			<Abstract type="html">ID Property of the node.</Abstract>
+			<DeclaredIn>DNNode.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) float ranking</Declaration>
+			
+			
+			<Anchor>//api/name/ranking</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+	</File>
+</Tokens>
