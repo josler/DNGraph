@@ -14,8 +14,17 @@
     self.ranker = [[DNRanker alloc] initWithDelgate:self];
 }
 
-
 #pragma mark - DNNode Delegate
+
+- (NSDictionary *)jsonFormat
+{
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    [dict setValue:self.facebookId forKey:@"facebookId"];
+    [dict setValue:self.name forKey:@"name"];
+    [dict setValue:[NSNumber numberWithFloat:self.ranking] forKey:@"ranking"];
+    [dict setValue:@"person" forKey:@"type"];
+    return dict;
+}
 
 - (NSString *)getId {return self.facebookId;}
 - (void)like {[ranker like];}

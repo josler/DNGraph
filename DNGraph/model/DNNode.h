@@ -37,6 +37,12 @@
 - (NSString *)getId;
 
 /**
+ Get the JSON-compliant representation of the node.
+ @return NSDictionary representing the node.
+ */
+- (NSDictionary *)jsonFormat;
+
+/**
  ID Property of the node.
  */
 @property (nonatomic) float ranking;
