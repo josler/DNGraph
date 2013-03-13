@@ -67,4 +67,12 @@
 }
 
 
+- (void)testJsonFormat
+{
+    NSDictionary *dict = [self.testSource jsonFormat];
+    STAssertEqualObjects([dict valueForKey:@"facebookId"], self.testSource.facebookId, @"facebook Id should match");
+    STAssertEqualObjects([dict valueForKey:@"type"], @"source", @"should be  source type");
+    STAssertEquals([[dict valueForKey:@"ranking"] floatValue], self.testSource.ranking, @"ranking should match");
+}
+
 @end

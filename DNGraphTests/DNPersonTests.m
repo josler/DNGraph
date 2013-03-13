@@ -60,6 +60,14 @@
     STAssertEquals(self.testPerson.ranking, (float)0.5, @"ranking reset to 0.5");
 }
 
+- (void)testJsonFormat
+{
+    NSDictionary *dict = [self.testPerson jsonFormat];
+    STAssertEqualObjects([dict valueForKey:@"facebookId"], self.testPerson.facebookId, @"facebook Id should match");
+    STAssertEqualObjects([dict valueForKey:@"type"], @"person", @"should be  person type");
+    STAssertEquals([[dict valueForKey:@"ranking"] floatValue], self.testPerson.ranking, @"ranking should match");
+}
+
 #pragma mark - utility
 
 - (void)createPersonWithId: (NSString *)facebookId andName: (NSString *)name

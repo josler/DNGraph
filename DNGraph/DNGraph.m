@@ -108,9 +108,11 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDescription];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:
-                              @"(facebookId = %@)", facebookId];
-    [request setPredicate:predicate];
+    if (facebookId) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:
+                                  @"(facebookId = %@)", facebookId];
+        [request setPredicate:predicate];
+    }
     
     NSError *error = nil;
     NSArray *array = [moc executeFetchRequest:request error:&error];
@@ -119,6 +121,16 @@
         // Deal with error...
     }
     return array;
+}
+
+- (NSArray *)getAllNodes
+{
+    // TODO:add articles
+    NSMutableArray *results = [[NSMutableArray alloc] init];
+    [results addObjectsFromArray:[self fetchNodesOfType:@"DNPerson" WithId:nil]];
+    [results addObjectsFromArray:[self fetchNodesOfType:@"DNSubject" WithId:nil]];
+    [results addObjectsFromArray:[self fetchNodesOfType:@"DNSource" WithId:nil]];
+    return results;
 }
 
 
@@ -192,6 +204,5 @@
     
     return __persistentStoreCoordinator;
 }
-
 
 @end

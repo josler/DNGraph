@@ -68,8 +68,16 @@
  @param source The DNSource for the article.
  @param author The DNPerson (author) of the article.
  @param hashValue A hash value used to determine uniqueness.
+ @return Returns the created DNArticle.
  */
 - (DNArticle *)makeArticleWithSubject: (DNSubject *)subject Source: (DNSource *)source Author:(DNPerson *)author andHash:(NSString *)hashValue;
+
+/**
+ Returns all the nodes in the graph, very memory intensive.
+ 
+ @return Returns all nodes.
+ */
+- (NSArray *)getAllNodes;
 
 #pragma mark - Core Data Stack
 

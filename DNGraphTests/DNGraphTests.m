@@ -112,6 +112,13 @@
     STAssertEquals(person.name, @"somename", @"returns the existing person");
 }
 
+- (void)testGetExistingNodeOfType
+{
+    [self.graph makePersonWithId:@"someId" andName:@"somename"];
+    DNPerson *person = [self.graph getExistingNodeOfType:@"DNPerson" withId:@"someId"];
+    STAssertEquals(person.name, @"somename", @"returns the existing person");
+}
+
 - (void)testGetExistingNodeOfTypeMultipleReturnsOnlyOne
 {
     [self.graph makePersonWithId:@"someId" andName:@"somename"];
