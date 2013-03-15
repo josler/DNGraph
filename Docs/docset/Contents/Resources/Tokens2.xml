@@ -104,8 +104,20 @@
 					<Abstract type="html">A hash value used to determine uniqueness.</Abstract>
 				</Parameter>
 			</Parameters>
-			
+			<ReturnValue><Abstract type="html">Returns the created DNArticle.</Abstract></ReturnValue>
 			<Anchor>//api/name/makeArticleWithSubject:Source:Author:andHash:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/getAllNodes</TokenIdentifier>
+			<Abstract type="html">Returns all the nodes in the graph, very memory intensive.</Abstract>
+			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)getAllNodes</Declaration>
+			
+			<ReturnValue><Abstract type="html">Returns all nodes.</Abstract></ReturnValue>
+			<Anchor>//api/name/getAllNodes</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		

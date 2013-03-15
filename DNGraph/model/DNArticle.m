@@ -9,8 +9,8 @@
 
 - (void)setupWithSubject:(DNSubject *)subject Source:(DNSource *)source andAuthor:(DNPerson *)author
 {
-    self.subjectId = subject.facebookId; // 'soft' link
-    self.sourceId = source.facebookId;
+    self.subjectId = [subject getId]; // 'soft' link
+    self.sourceId = [source getId];
 
     self.nodeRankingValue += subject.ranking;
     self.nodeRankingValue += source.ranking;

@@ -37,7 +37,8 @@
 - (void)testMakeSourceWithName
 {
     DNSource *source = [self.graph makeSourceWithName:@"somename"];
-    STAssertEquals(source.name, @"somename", @"Should return a source with the given name");
+    STAssertNotNil(source, @"source should not be nil");
+    STAssertEqualObjects(source.name, @"somename", @"Should return a source with the given name");
     [source like]; // altering the source so we can identify it
     source = [self.graph makeSourceWithName:@"somename"]; // should return the same object
     STAssertFalse(source.ranking == 0.5f, @"Should return the previously created Source");
@@ -112,11 +113,16 @@
     STAssertEquals(person.name, @"somename", @"returns the existing person");
 }
 
-- (void)testGetExistingNodeOfType
+- (void)testGetAllNodes
 {
-    [self.graph makePersonWithId:@"someId" andName:@"somename"];
-    DNPerson *person = [self.graph getExistingNodeOfType:@"DNPerson" withId:@"someId"];
-    STAssertEquals(person.name, @"somename", @"returns the existing person");
+//    [self.graph makePersonWithId:@"someId" andName:@"somename"];
+//    [self.graph makeSubjectWithId:@"someId" andName:@"somename" andCategory:@"somecategory"];
+//    [self.graph makeSourceWithName:@"somename"];
+    NSArray *nodes = [self.graph getAllNodes];
+    for (int i = 0; i < nodes.count; i++) {
+        STAssertEqualObjects([nodes[i] name], @"somename", @"Name should be name");
+    }
+    STAssertTrue(nodes.count == 3, @"Should be three nodes");
 }
 
 - (void)testGetExistingNodeOfTypeMultipleReturnsOnlyOne

@@ -11,6 +11,7 @@
 #import "DNPerson.h"
 #import "DNSource.h"
 #import "DNSubject.h"
+#import "DNGraph.h"
 
 @implementation DNArticleTests
 
@@ -22,16 +23,17 @@
     STAssertTrue([psc addPersistentStoreWithType:NSInMemoryStoreType configuration:nil URL:nil options:nil error:NULL] ? YES : NO, @"Should be able to add in-memory store");
     self.managedObjectContext = [[NSManagedObjectContext alloc] init];
     self.managedObjectContext.persistentStoreCoordinator = psc;
-    [self createTestArticle];
+//    [self createTestArticle];
 }
 
 - (void)tearDown {
     self.managedObjectContext = nil;
+    [super tearDown];
 }
 
 - (void)testSetup {
     [self createTestArticle];
-    STAssertTrue(self.testArticle.nodeRankingValue == 1.5f, @"ranking summed to 1.5");
+    STAssertTrue(self.testArticle.nodeRankingValue == 1.5f, @"ranking (%f) should be 1.5", self.testArticle.nodeRankingValue);
     STAssertTrue(self.testArticle.nodeCountValue == 3, @"three nodes");
 }
 
@@ -76,13 +78,12 @@
 }
 
 - (void)createTestArticle {
-    DNSubject *testSubject = [DNSubject insertInManagedObjectContext:self.managedObjectContext];
-    [testSubject setupWithId:@"1" andName:@"somename" andCategory:@"somecategory"];
-    DNSource *testSource = [DNSource insertInManagedObjectContext:self.managedObjectContext];
-    [testSource setupWithName:@"anothername"];
-    DNPerson *testPerson = [DNPerson insertInManagedObjectContext:self.managedObjectContext];
-    [testPerson setupWithId:@"2" andName:@"someperson"];
+    DNGraph *graph = [[DNGraph alloc] init];
+    DNSubject *testSubject = [graph makeSubjectWithId:@"1" andName:@"somename" andCategory:@"somecategory"];
     
+    DNSource *testSource = [graph makeSourceWithName:@"somename"];
+    DNPerson *testPerson = [graph makePersonWithId:@"2" andName:@"somename"];
+    [graph saveContext];
     self.testArticle = [DNArticle insertInManagedObjectContext:self.managedObjectContext];
     [self.testArticle setupWithSubject:testSubject Source:testSource andAuthor:testPerson];
 }

@@ -32,7 +32,11 @@
 - (DNSource *)makeSourceWithName: (NSString *)name
 {
     DNSource *source = [self getExistingNodeOfType:@"DNSource" withId:name];
-    if (source) return source;
+    if (source) {
+        NSLog(@"found existing source %@", source.name);
+     return source;
+        
+    }
     
     source = [DNSource insertInManagedObjectContext:self.managedObjectContext];
     [source setupWithName:name];

@@ -60,6 +60,18 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DNNode/jsonFormat</TokenIdentifier>
+			<Abstract type="html">Get the JSON-compliant representation of the node.</Abstract>
+			<DeclaredIn>DNNode.h</DeclaredIn>			
+			
+			<Declaration>- (NSDictionary *)jsonFormat</Declaration>
+			
+			<ReturnValue><Abstract type="html">NSDictionary representing the node.</Abstract></ReturnValue>
+			<Anchor>//api/name/jsonFormat</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/DNNode/setRanking:</TokenIdentifier>
 			<Abstract type="html">ID Property of the node.</Abstract>
 			<DeclaredIn>DNNode.h</DeclaredIn>			
