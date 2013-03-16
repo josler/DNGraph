@@ -12,6 +12,7 @@ extern const struct DNArticleAttributes {
 	__unsafe_unretained NSString *ranking;
 	__unsafe_unretained NSString *textValue;
 	__unsafe_unretained NSString *title;
+	__unsafe_unretained NSString *type;
 	__unsafe_unretained NSString *videoUrl;
 } DNArticleAttributes;
 
@@ -20,6 +21,7 @@ extern const struct DNArticleRelationships {
 
 extern const struct DNArticleFetchedProperties {
 } DNArticleFetchedProperties;
+
 
 
 
@@ -122,6 +124,16 @@ extern const struct DNArticleFetchedProperties {
 
 
 
+@property (nonatomic, strong) NSString* type;
+
+
+
+//- (BOOL)validateType:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
 @property (nonatomic, strong) NSString* videoUrl;
 
 
@@ -186,6 +198,12 @@ extern const struct DNArticleFetchedProperties {
 
 - (NSString*)primitiveTitle;
 - (void)setPrimitiveTitle:(NSString*)value;
+
+
+
+
+- (NSString*)primitiveType;
+- (void)setPrimitiveType:(NSString*)value;
 
 
 

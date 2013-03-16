@@ -11,6 +11,7 @@ const struct DNArticleAttributes DNArticleAttributes = {
 	.ranking = @"ranking",
 	.textValue = @"textValue",
 	.title = @"title",
+	.type = @"type",
 	.videoUrl = @"videoUrl",
 };
 
@@ -144,6 +145,13 @@ const struct DNArticleFetchedProperties DNArticleFetchedProperties = {
 
 
 @dynamic title;
+
+
+
+
+
+
+@dynamic type;
 
 
 
