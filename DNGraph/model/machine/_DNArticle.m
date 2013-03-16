@@ -14,6 +14,7 @@ const struct DNArticleAttributes DNArticleAttributes = {
 	.sourceId = @"sourceId",
 	.subjectId = @"subjectId",
 	.textValue = @"textValue",
+	.title = @"title",
 	.videoUrl = @"videoUrl",
 };
 
@@ -192,6 +193,13 @@ const struct DNArticleFetchedProperties DNArticleFetchedProperties = {
 
 
 @dynamic textValue;
+
+
+
+
+
+
+@dynamic title;
 
 
 
