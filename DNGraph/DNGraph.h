@@ -70,7 +70,7 @@
  @param hashValue A hash value used to determine uniqueness.
  @return Returns the created DNArticle.
  */
-- (DNArticle *)makeArticleWithSubject: (DNSubject *)subject Source: (DNSource *)source Author:(DNPerson *)author andHash:(NSString *)hashValue;
+- (DNArticle *)makeArticleWithRanking: (float)ranking andHash:(NSString *)hash;
 
 /**
  Returns all the nodes in the graph, very memory intensive.

@@ -63,12 +63,12 @@
     return person;
 }
 
-- (DNArticle *)makeArticleWithSubject: (DNSubject *)subject Source: (DNSource *)source Author:(DNPerson *)author andHash:(NSString *)hashValue
+- (DNArticle *)makeArticleWithRanking: (float)ranking andHash:(NSString *)hashValue
 {
     DNArticle *article = [self getExistingArticleWithHash:hashValue];
     if (article) return article;
     article = [DNArticle insertInManagedObjectContext:self.managedObjectContext];
-    [article setupWithSubject:subject Source:source andAuthor:author];
+    [article setupWithRanking:ranking];
     article.hashValue = hashValue;
     return article;
 }

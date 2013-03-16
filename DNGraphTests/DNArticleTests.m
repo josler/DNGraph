@@ -33,27 +33,7 @@
 
 - (void)testSetup {
     [self createTestArticle];
-    STAssertTrue(self.testArticle.nodeRankingValue == 1.5f, @"ranking (%f) should be 1.5", self.testArticle.nodeRankingValue);
-    STAssertTrue(self.testArticle.nodeCountValue == 3, @"three nodes");
-}
-
-- (void)testSetupWithoutPerson {
-    [self createTestArticleWithoutPerson];
-    STAssertTrue(self.testArticle.nodeRankingValue == 1.0f, @"ranking summed to 1");
-    STAssertTrue(self.testArticle.nodeCountValue == 2, @"two nodes");
-}
-
-- (void)testGetOverallRanking {
-    [self createTestArticle];
-    STAssertTrue([self.testArticle getOverallRanking] == 0.5f, @"overall ranking should be the average");
-}
-
-- (void)testSetComments {
-    [self createTestArticle];
-    NSMutableArray *people = [self createPeopleArray];
-    [self.testArticle setComments:@"some comments" withPeople:people];
-    STAssertTrue(self.testArticle.nodeRankingValue == 2.5f, @"ranking summed to 2.5");
-    STAssertTrue(self.testArticle.nodeCountValue == 5, @"five nodes");
+    STAssertTrue(self.testArticle.rankingValue == 1.5f, @"ranking (%f) should be 1.5", self.testArticle.rankingValue);
 }
 
 - (NSMutableArray *)createPeopleArray {
@@ -67,25 +47,12 @@
     return people;
 }
 
-- (void)createTestArticleWithoutPerson {
-    DNSubject *testSubject = [DNSubject insertInManagedObjectContext:self.managedObjectContext];
-    [testSubject setupWithId:@"1" andName:@"somename" andCategory:@"somecategory"];
-    DNSource *testSource = [DNSource insertInManagedObjectContext:self.managedObjectContext];
-    [testSource setupWithName:@"anothername"];
-    
-    self.testArticle = [DNArticle insertInManagedObjectContext:self.managedObjectContext];
-    [self.testArticle setupWithSubject:testSubject Source:testSource andAuthor:nil];
-}
-
 - (void)createTestArticle {
     DNGraph *graph = [[DNGraph alloc] init];
-    DNSubject *testSubject = [graph makeSubjectWithId:@"1" andName:@"somename" andCategory:@"somecategory"];
-    
-    DNSource *testSource = [graph makeSourceWithName:@"somename"];
-    DNPerson *testPerson = [graph makePersonWithId:@"2" andName:@"somename"];
     [graph saveContext];
     self.testArticle = [DNArticle insertInManagedObjectContext:self.managedObjectContext];
-    [self.testArticle setupWithSubject:testSubject Source:testSource andAuthor:testPerson];
+    [self.testArticle setupWithRanking:1.5f];
+    STAssertEquals(self.testArticle.rankingValue, 1.5f, @"ranking set");
 }
 
 @end

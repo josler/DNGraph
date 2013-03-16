@@ -71,15 +71,13 @@
     STAssertFalse(person.ranking == 0.5f, @"Should return the previously created person");
 }
 
-- (void)testMakeArticleWithSubjectSourceAuthorAndHash {
-    DNPerson *person = [self.graph makePersonWithId:@"someId" andName:@"somename"];
-    DNSubject *subject = [self.graph makeSubjectWithId:@"someId" andName:@"somename" andCategory:@"somecategory"];
-    DNSource *source = [self.graph makeSourceWithName:@"somename"];
-    DNArticle *article = [self.graph makeArticleWithSubject:subject Source:source Author:person andHash:@"somehash"];
+- (void)testMakeArticleWithRankingAndHash {
+    float ranking = 1.7f;
+    DNArticle *article = [self.graph makeArticleWithRanking:ranking andHash:@"somehash"];
     STAssertEquals(article.hashValue, @"somehash", @"Should return a article with the given hash");
-    [article setComments:@"somecomments" withPeople:nil];
+    article.comments  = @"some comments";
     STAssertTrue(article.comments != nil, @"modified article");
-    article = [self.graph makeArticleWithSubject:subject Source:source Author:person andHash:@"somehash"];
+    article = [self.graph makeArticleWithRanking:ranking andHash:@"somehash"];
     STAssertFalse(article.comments == nil, @"Should return previously created (and modified) article");
 }
 
@@ -91,12 +89,9 @@
 
 - (void)testGetExistingArticleWithHash
 {
-    DNPerson *person = [self.graph makePersonWithId:@"someId" andName:@"somename"];
-    DNSubject *subject = [self.graph makeSubjectWithId:@"someId" andName:@"somename" andCategory:@"somecategory"];
-    DNSource *source = [self.graph makeSourceWithName:@"somename"];
 
-    [self.graph makeArticleWithSubject:subject Source:source Author:person andHash:@"hash"];
-    DNArticle *article = [self.graph makeArticleWithSubject:subject Source:source Author:person andHash:@"hash"];
+    [self.graph makeArticleWithRanking:0.6f andHash:@"hash"];
+    DNArticle *article = [self.graph makeArticleWithRanking:0.6f andHash:@"hash"];
     STAssertEquals(article.hashValue, @"hash", @"returns existing article");
 }
 
@@ -115,9 +110,9 @@
 
 - (void)testGetAllNodes
 {
-//    [self.graph makePersonWithId:@"someId" andName:@"somename"];
-//    [self.graph makeSubjectWithId:@"someId" andName:@"somename" andCategory:@"somecategory"];
-//    [self.graph makeSourceWithName:@"somename"];
+    [self.graph makePersonWithId:@"someId" andName:@"somename"];
+    [self.graph makeSubjectWithId:@"someId" andName:@"somename" andCategory:@"somecategory"];
+    [self.graph makeSourceWithName:@"somename"];
     NSArray *nodes = [self.graph getAllNodes];
     for (int i = 0; i < nodes.count; i++) {
         STAssertEqualObjects([nodes[i] name], @"somename", @"Name should be name");

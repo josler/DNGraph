@@ -9,11 +9,7 @@ extern const struct DNArticleAttributes {
 	__unsafe_unretained NSString *favourite;
 	__unsafe_unretained NSString *hashValue;
 	__unsafe_unretained NSString *imageFilename;
-	__unsafe_unretained NSString *nodeCount;
-	__unsafe_unretained NSString *nodeRanking;
-	__unsafe_unretained NSString *personId;
-	__unsafe_unretained NSString *sourceId;
-	__unsafe_unretained NSString *subjectId;
+	__unsafe_unretained NSString *ranking;
 	__unsafe_unretained NSString *textValue;
 	__unsafe_unretained NSString *title;
 	__unsafe_unretained NSString *videoUrl;
@@ -24,10 +20,6 @@ extern const struct DNArticleRelationships {
 
 extern const struct DNArticleFetchedProperties {
 } DNArticleFetchedProperties;
-
-
-
-
 
 
 
@@ -96,59 +88,15 @@ extern const struct DNArticleFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSNumber* nodeCount;
+@property (nonatomic, strong) NSNumber* ranking;
 
 
 
-@property int16_t nodeCountValue;
-- (int16_t)nodeCountValue;
-- (void)setNodeCountValue:(int16_t)value_;
+@property float rankingValue;
+- (float)rankingValue;
+- (void)setRankingValue:(float)value_;
 
-//- (BOOL)validateNodeCount:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) NSNumber* nodeRanking;
-
-
-
-@property double nodeRankingValue;
-- (double)nodeRankingValue;
-- (void)setNodeRankingValue:(double)value_;
-
-//- (BOOL)validateNodeRanking:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) NSString* personId;
-
-
-
-//- (BOOL)validatePersonId:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) NSString* sourceId;
-
-
-
-//- (BOOL)validateSourceId:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) NSString* subjectId;
-
-
-
-//- (BOOL)validateSubjectId:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateRanking:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -221,38 +169,11 @@ extern const struct DNArticleFetchedProperties {
 
 
 
-- (NSNumber*)primitiveNodeCount;
-- (void)setPrimitiveNodeCount:(NSNumber*)value;
+- (NSNumber*)primitiveRanking;
+- (void)setPrimitiveRanking:(NSNumber*)value;
 
-- (int16_t)primitiveNodeCountValue;
-- (void)setPrimitiveNodeCountValue:(int16_t)value_;
-
-
-
-
-- (NSNumber*)primitiveNodeRanking;
-- (void)setPrimitiveNodeRanking:(NSNumber*)value;
-
-- (double)primitiveNodeRankingValue;
-- (void)setPrimitiveNodeRankingValue:(double)value_;
-
-
-
-
-- (NSString*)primitivePersonId;
-- (void)setPrimitivePersonId:(NSString*)value;
-
-
-
-
-- (NSString*)primitiveSourceId;
-- (void)setPrimitiveSourceId:(NSString*)value;
-
-
-
-
-- (NSString*)primitiveSubjectId;
-- (void)setPrimitiveSubjectId:(NSString*)value;
+- (float)primitiveRankingValue;
+- (void)setPrimitiveRankingValue:(float)value_;
 
 
 

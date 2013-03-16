@@ -8,11 +8,7 @@ const struct DNArticleAttributes DNArticleAttributes = {
 	.favourite = @"favourite",
 	.hashValue = @"hashValue",
 	.imageFilename = @"imageFilename",
-	.nodeCount = @"nodeCount",
-	.nodeRanking = @"nodeRanking",
-	.personId = @"personId",
-	.sourceId = @"sourceId",
-	.subjectId = @"subjectId",
+	.ranking = @"ranking",
 	.textValue = @"textValue",
 	.title = @"title",
 	.videoUrl = @"videoUrl",
@@ -55,13 +51,8 @@ const struct DNArticleFetchedProperties DNArticleFetchedProperties = {
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
-	if ([key isEqualToString:@"nodeCountValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"nodeCount"];
-		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
-		return keyPaths;
-	}
-	if ([key isEqualToString:@"nodeRankingValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"nodeRanking"];
+	if ([key isEqualToString:@"rankingValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"ranking"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
@@ -119,74 +110,27 @@ const struct DNArticleFetchedProperties DNArticleFetchedProperties = {
 
 
 
-@dynamic nodeCount;
+@dynamic ranking;
 
 
 
-- (int16_t)nodeCountValue {
-	NSNumber *result = [self nodeCount];
-	return [result shortValue];
+- (float)rankingValue {
+	NSNumber *result = [self ranking];
+	return [result floatValue];
 }
 
-- (void)setNodeCountValue:(int16_t)value_ {
-	[self setNodeCount:[NSNumber numberWithShort:value_]];
+- (void)setRankingValue:(float)value_ {
+	[self setRanking:[NSNumber numberWithFloat:value_]];
 }
 
-- (int16_t)primitiveNodeCountValue {
-	NSNumber *result = [self primitiveNodeCount];
-	return [result shortValue];
+- (float)primitiveRankingValue {
+	NSNumber *result = [self primitiveRanking];
+	return [result floatValue];
 }
 
-- (void)setPrimitiveNodeCountValue:(int16_t)value_ {
-	[self setPrimitiveNodeCount:[NSNumber numberWithShort:value_]];
+- (void)setPrimitiveRankingValue:(float)value_ {
+	[self setPrimitiveRanking:[NSNumber numberWithFloat:value_]];
 }
-
-
-
-
-
-@dynamic nodeRanking;
-
-
-
-- (double)nodeRankingValue {
-	NSNumber *result = [self nodeRanking];
-	return [result doubleValue];
-}
-
-- (void)setNodeRankingValue:(double)value_ {
-	[self setNodeRanking:[NSNumber numberWithDouble:value_]];
-}
-
-- (double)primitiveNodeRankingValue {
-	NSNumber *result = [self primitiveNodeRanking];
-	return [result doubleValue];
-}
-
-- (void)setPrimitiveNodeRankingValue:(double)value_ {
-	[self setPrimitiveNodeRanking:[NSNumber numberWithDouble:value_]];
-}
-
-
-
-
-
-@dynamic personId;
-
-
-
-
-
-
-@dynamic sourceId;
-
-
-
-
-
-
-@dynamic subjectId;
-
 
 
 
