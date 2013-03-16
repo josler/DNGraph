@@ -23,4 +23,11 @@
  */
 - (void)setupWithRanking:(float)ranking;
 
+/** 
+ Gets The UIImage for the article.
+ 
+ @return UIImage, nil if no imageFilename set.
+ */
+- (UIImage *)getImage;
+
 @end
