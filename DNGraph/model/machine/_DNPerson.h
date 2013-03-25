@@ -11,11 +11,13 @@ extern const struct DNPersonAttributes {
 } DNPersonAttributes;
 
 extern const struct DNPersonRelationships {
+	__unsafe_unretained NSString *articles;
 } DNPersonRelationships;
 
 extern const struct DNPersonFetchedProperties {
 } DNPersonFetchedProperties;
 
+@class DNArticle;
 
 
 
@@ -68,10 +70,22 @@ extern const struct DNPersonFetchedProperties {
 
 
 
+@property (nonatomic, strong) NSSet *articles;
+
+- (NSMutableSet*)articlesSet;
+
+
+
+
 
 @end
 
 @interface _DNPerson (CoreDataGeneratedAccessors)
+
+- (void)addArticles:(NSSet*)value_;
+- (void)removeArticles:(NSSet*)value_;
+- (void)addArticlesObject:(DNArticle*)value_;
+- (void)removeArticlesObject:(DNArticle*)value_;
 
 @end
 
@@ -97,6 +111,11 @@ extern const struct DNPersonFetchedProperties {
 - (void)setPrimitiveRankingValue:(float)value_;
 
 
+
+
+
+- (NSMutableSet*)primitiveArticles;
+- (void)setPrimitiveArticles:(NSMutableSet*)value;
 
 
 @end

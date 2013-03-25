@@ -11,11 +11,13 @@ extern const struct DNSourceAttributes {
 } DNSourceAttributes;
 
 extern const struct DNSourceRelationships {
+	__unsafe_unretained NSString *articles;
 } DNSourceRelationships;
 
 extern const struct DNSourceFetchedProperties {
 } DNSourceFetchedProperties;
 
+@class DNArticle;
 
 
 
@@ -68,10 +70,22 @@ extern const struct DNSourceFetchedProperties {
 
 
 
+@property (nonatomic, strong) NSSet *articles;
+
+- (NSMutableSet*)articlesSet;
+
+
+
+
 
 @end
 
 @interface _DNSource (CoreDataGeneratedAccessors)
+
+- (void)addArticles:(NSSet*)value_;
+- (void)removeArticles:(NSSet*)value_;
+- (void)addArticlesObject:(DNArticle*)value_;
+- (void)removeArticlesObject:(DNArticle*)value_;
 
 @end
 
@@ -97,6 +111,11 @@ extern const struct DNSourceFetchedProperties {
 - (void)setPrimitiveRankingValue:(float)value_;
 
 
+
+
+
+- (NSMutableSet*)primitiveArticles;
+- (void)setPrimitiveArticles:(NSMutableSet*)value;
 
 
 @end

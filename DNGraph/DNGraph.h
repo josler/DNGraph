@@ -63,17 +63,18 @@
 - (DNSource *)makeSourceWithName: (NSString *)name;
 
 /**
- Returns an Article with given DNSubject, DNSource and DNPerson, matching the hash.
+ Returns an Article with given DNSubject, DNSource, DNPerson and ranking matching the hash.
  
  If the article already exists (matching hash), then the existing instance will be returned.
  
  @param subject The DNSubject for the article.
  @param source The DNSource for the article.
  @param author The DNPerson (author) of the article.
+ @param ranking The overall ranking of the article.
  @param hashValue A hash value used to determine uniqueness.
  @return Returns the created DNArticle.
  */
-- (DNArticle *)makeArticleWithRanking: (float)ranking andHash:(NSString *)hash;
+- (DNArticle *)makeArticleWithSubject:(DNSubject *)subject Source:(DNSource *)source Author:(DNPerson *)author Ranking:(float)ranking andHash:(NSString *)hashValue;
 
 /**
  Returns all the nodes in the graph, very memory intensive.

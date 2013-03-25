@@ -33,26 +33,44 @@
 
 - (void)testSetup {
     [self createTestArticle];
-    STAssertTrue(self.testArticle.rankingValue == 1.5f, @"ranking (%f) should be 1.5", self.testArticle.rankingValue);
+    STAssertTrue(self.testArticle.ranking == 1.5f, @"ranking (%f) should be 1.5", self.testArticle.rankingValue);
 }
 
-- (NSMutableArray *)createPeopleArray {
-    NSMutableArray *people = [[NSMutableArray alloc] init];
-    DNPerson *testPerson1 = [DNPerson insertInManagedObjectContext:self.managedObjectContext];
-    [testPerson1 setupWithId:@"1" andName:@"someperson"];
-    DNPerson *testPerson2 = [DNPerson insertInManagedObjectContext:self.managedObjectContext];
-    [testPerson2 setupWithId:@"2" andName:@"otherperson"];
-    [people addObject:testPerson1];
-    [people addObject:testPerson2];
-    return people;
+- (void)testLike {
+    [self createTestArticle];
+    [self.testArticle like];
+    STAssertTrue(self.testArticle.source.ranking > 0.5, @"ranking should increase for components");
+}
+
+- (void)testDislike {
+    [self createTestArticle];
+    [self.testArticle dislike];
+    STAssertTrue(self.testArticle.source.ranking < 0.5, @"ranking should decrease for components");
+    STAssertTrue(self.testArticle.ranking < 0.001, @"ranking (%f) should be zero", self.testArticle.ranking);
+}
+
+- (void)testJsonFormat {
+    [self createTestArticle];
+    NSDictionary *dict = [self.testArticle jsonFormat];
+    STAssertEqualObjects([dict valueForKey:@"hashValue"], self.testArticle.hashValue, @"hash should match");
+    STAssertEqualObjects([dict valueForKey:@"type"], @"article", @"should be article type");
+    STAssertEqualObjects([dict valueForKey:@"favourite"], self.testArticle.favourite, @"should save favourite status");
 }
 
 - (void)createTestArticle {
-    DNGraph *graph = [[DNGraph alloc] init];
-    [graph saveContext];
+    DNPerson *testPerson1 = [DNPerson insertInManagedObjectContext:self.managedObjectContext];
+    [testPerson1 setupWithId:@"1" andName:@"someperson"];
+    DNSubject *subject = [DNSubject insertInManagedObjectContext:self.managedObjectContext];
+    [subject setupWithId:@"someidsub" andName:@"sub1" andCategory:@"category"];
+    DNSource *source = [DNSource insertInManagedObjectContext:self.managedObjectContext];
+    [source setupWithName:@"sourcename"];
     self.testArticle = [DNArticle insertInManagedObjectContext:self.managedObjectContext];
-    [self.testArticle setupWithRanking:1.5f];
-    STAssertEquals(self.testArticle.rankingValue, 1.5f, @"ranking set");
+    [self.testArticle setupWithPerson:testPerson1 Source:source Subject:subject andRanking:1.5f];
+    STAssertEquals(self.testArticle.ranking, 1.5f, @"ranking set");
+    STAssertEqualObjects(self.testArticle.source, source, @"source set");
+    STAssertEqualObjects(self.testArticle.subject, subject, @"subject set");
+    STAssertEqualObjects(self.testArticle.person, testPerson1, @"person set");
+    STAssertTrue([source.articles containsObject:self.testArticle], @"source articles should contain this");
 }
 
 @end

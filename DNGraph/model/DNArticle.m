@@ -5,9 +5,13 @@
 
 @implementation DNArticle
 
-- (void)setupWithRanking:(float)ranking
+
+- (void)setupWithPerson:(DNPerson *)person Source:(DNSource *)source Subject:(DNSubject *)subject andRanking: (float)ranking;
 {
-    self.rankingValue = ranking;
+    self.source = source;
+    self.person = person;
+    self.subject = subject;
+    self.ranking = ranking;
 }
 
 - (UIImage *)getImage
@@ -20,5 +24,47 @@
     }
     return nil;
 }
+
+- (void)like
+{
+    if (self.subject)
+        [self.subject like];
+    if (self.person)
+        [self.person like];
+    if (self.source)
+        [self.source like];
+}
+
+- (void)dislike
+{
+    if (self.subject)
+        [self.subject dislike];
+    if (self.person)
+        [self.person dislike];
+    if (self.source)
+        [self.source dislike];
+    self.rankingValue = 0; // the actual article is not liked and should go.
+}
+
+- (void)resetRanking {} // no meaning for an article as it's ranking composed of it's parts
+
+- (NSString *)getId { return self.hashValue; }
+
+- (NSDictionary *)jsonFormat
+{
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    [dict setValue:@"article" forKey:@"type"];
+    [dict setValue:self.type forKey:@"articleType"];
+    [dict setValue:self.hashValue forKey:@"hashValue"];
+    [dict setValue:self.title forKey:@"title"];
+    [dict setValue:self.textValue forKey:@"textValue"];
+    [dict setValue:[NSNumber numberWithFloat:self.ranking] forKey:@"ranking"];
+    [dict setValue:self.comments forKey:@"comments"];
+    [dict setValue:self.favourite forKey:@"favourite"];
+    [dict setValue:self.imageFilename forKey:@"imageFilename"];
+    [dict setValue:self.videoUrl forKey:@"videoUrl"];
+    return dict;
+}
+
 
 @end

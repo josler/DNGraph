@@ -10,6 +10,7 @@ const struct DNPersonAttributes DNPersonAttributes = {
 };
 
 const struct DNPersonRelationships DNPersonRelationships = {
+	.articles = @"articles",
 };
 
 const struct DNPersonFetchedProperties DNPersonFetchedProperties = {
@@ -92,6 +93,19 @@ const struct DNPersonFetchedProperties DNPersonFetchedProperties = {
 
 
 
+
+@dynamic articles;
+
+	
+- (NSMutableSet*)articlesSet {
+	[self willAccessValueForKey:@"articles"];
+  
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"articles"];
+  
+	[self didAccessValueForKey:@"articles"];
+	return result;
+}
+	
 
 
 

@@ -67,12 +67,12 @@
     return person;
 }
 
-- (DNArticle *)makeArticleWithRanking: (float)ranking andHash:(NSString *)hashValue
+- (DNArticle *)makeArticleWithSubject:(DNSubject *)subject Source:(DNSource *)source Author:(DNPerson *)author Ranking:(float)ranking andHash:(NSString *)hashValue
 {
     DNArticle *article = [self getExistingArticleWithHash:hashValue];
     if (article) return article;
     article = [DNArticle insertInManagedObjectContext:self.managedObjectContext];
-    [article setupWithRanking:ranking];
+    [article setupWithPerson:author Source:source Subject:subject andRanking:ranking];
     article.hashValue = hashValue;
     return article;
 }
@@ -133,11 +133,11 @@
 
 - (NSArray *)getAllNodes
 {
-    // TODO:add articles
     NSMutableArray *results = [[NSMutableArray alloc] init];
     [results addObjectsFromArray:[self fetchNodesOfType:@"DNPerson" WithId:nil]];
     [results addObjectsFromArray:[self fetchNodesOfType:@"DNSubject" WithId:nil]];
     [results addObjectsFromArray:[self fetchNodesOfType:@"DNSource" WithId:nil]];
+    [results addObject:[self fetchNodesOfType:@"DNArticle" WithId:nil]];
     return results;
 }
 
@@ -158,6 +158,20 @@
         DNSubject *subject = [self makeSubjectWithId:[json valueForKey:@"facebookId"] andName:[json valueForKey:@"name"] andCategory:[json valueForKey:@"category"]];
         [subject setRanking:[[json valueForKey:@"ranking"] floatValue]];
         return subject;
+    }
+    else if ([[json valueForKey:@"type"] isEqualToString:@"article"]) {
+        DNArticle *article = [self makeArticleWithSubject:nil Source:nil Author:nil Ranking:[[json valueForKey:@"ranking"] floatValue] andHash:[json valueForKey:@"hashValue"]];
+        article.videoUrl = [json valueForKey:@"videoUrl"];
+        article.imageFilename = [json valueForKey:@"imageFilename"];
+        article.comments = [json valueForKey:@"comments"];
+        article.title = [json valueForKey:@"title"];
+        article.textValue = [json valueForKey:@"textValue"];
+        article.favouriteValue = NO;
+        if([[json valueForKey:@"favourite"] isEqualToString:@"YES"]) {
+            article.favouriteValue = YES;
+        }
+        article.type = [json valueForKey:@"articleType"];
+            
     }
     return nil;
 }

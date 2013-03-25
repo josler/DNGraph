@@ -17,11 +17,17 @@ extern const struct DNArticleAttributes {
 } DNArticleAttributes;
 
 extern const struct DNArticleRelationships {
+	__unsafe_unretained NSString *person;
+	__unsafe_unretained NSString *source;
+	__unsafe_unretained NSString *subject;
 } DNArticleRelationships;
 
 extern const struct DNArticleFetchedProperties {
 } DNArticleFetchedProperties;
 
+@class DNPerson;
+@class DNSource;
+@class DNSubject;
 
 
 
@@ -144,6 +150,27 @@ extern const struct DNArticleFetchedProperties {
 
 
 
+@property (nonatomic, strong) DNPerson *person;
+
+//- (BOOL)validatePerson:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, strong) DNSource *source;
+
+//- (BOOL)validateSource:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, strong) DNSubject *subject;
+
+//- (BOOL)validateSubject:(id*)value_ error:(NSError**)error_;
+
+
+
+
 
 @end
 
@@ -212,6 +239,21 @@ extern const struct DNArticleFetchedProperties {
 - (void)setPrimitiveVideoUrl:(NSString*)value;
 
 
+
+
+
+- (DNPerson*)primitivePerson;
+- (void)setPrimitivePerson:(DNPerson*)value;
+
+
+
+- (DNSource*)primitiveSource;
+- (void)setPrimitiveSource:(DNSource*)value;
+
+
+
+- (DNSubject*)primitiveSubject;
+- (void)setPrimitiveSubject:(DNSubject*)value;
 
 
 @end
