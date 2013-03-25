@@ -21,10 +21,16 @@
 
 - (void)saveContext
 {
-    NSError *error;
-    [self.managedObjectContext save:&error];
-    if (error)
-        NSLog(@"error saving context");
+    NSError *error = nil;
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    if (managedObjectContext != nil)
+    {
+        if ([managedObjectContext hasChanges] & ![managedObjectContext save:&error])
+        {
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
 }
 
 #pragma mark - Factory Methods
@@ -33,9 +39,7 @@
 {
     DNSource *source = [self getExistingNodeOfType:@"DNSource" withId:name];
     if (source) {
-        NSLog(@"found existing source %@", source.name);
-     return source;
-        
+        return source;
     }
     
     source = [DNSource insertInManagedObjectContext:self.managedObjectContext];
@@ -232,15 +236,13 @@
 - (void)resetStore
 {
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite",self.modelName]];
-    [self deletePersistentStore:storeURL];
-}
-
-- (void)deletePersistentStore:(NSURL *)storeURL
-{
-    NSError *error = nil;
-    [[NSFileManager defaultManager] removeItemAtURL:storeURL error:&error];
-    if (error) { // Handle error }
-    }
+    NSError *error;
+    NSPersistentStoreCoordinator *storeCoordinator = self.persistentStoreCoordinator;
+    NSPersistentStore *store = [storeCoordinator persistentStoreForURL:storeURL];
+    
+    [storeCoordinator removePersistentStore:store error:&error];
+    [[NSFileManager defaultManager] removeItemAtPath:storeURL.path error:&error];
+    [storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error];
 }
 
 @end
