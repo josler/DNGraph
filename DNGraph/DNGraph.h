@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DNNode.h"
+
 
 @class DNPerson, DNSource, DNSubject, DNArticle;
+
 
 /**
  Handles interaction with the Graph.
@@ -78,6 +81,19 @@
  @return Returns all nodes.
  */
 - (NSArray *)getAllNodes;
+
+/**
+ Returns a node created from the provided json dictionary (DNStore format).
+ 
+ @return an object conforming to DNNode protocol.
+ */
+- (id <DNNode>)makeNodeForJson:(NSDictionary *)json;
+
+/**
+ Resets the contents of the store, completely removing existing nodes. Use with care!
+ */
+- (void)resetStore;
+
 
 #pragma mark - Core Data Stack
 

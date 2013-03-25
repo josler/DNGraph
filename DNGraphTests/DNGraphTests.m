@@ -127,4 +127,26 @@
     DNPerson *person = [self.graph getExistingNodeOfType:@"DNPerson" withId:@"someId"];
     STAssertEquals(person.name, @"somename", @"returns the existing person"); // only returns one result, in practise there should only be one result.
 }
+
+- (void)testMakeNodeFromJsonPerson
+{
+    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:@"test1", @"facebookId", @"testname", @"name", @"0.5", @"ranking", @"person", @"type", nil];
+    DNPerson *p = [self.graph makeNodeForJson:dict];
+    STAssertEqualObjects(p.name, @"testname", @"should make a person");
+}
+
+- (void)testMakeNodeFromJsonSubject
+{
+    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:@"testsub1", @"facebookId", @"testsubname", @"name", @"0.5", @"ranking", @"somecategory", @"category", @"subject", @"type", nil];
+    DNSubject *s = [self.graph makeNodeForJson:dict];
+    STAssertEqualObjects(s.name, @"testsubname", @"should make a subject");
+}
+
+- (void)testMakeNodeFromJsonSource
+{
+    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:@"testsrc1", @"facebookId", @"testsrcname", @"name", @"0.5", @"ranking", @"source", @"type", nil];
+    DNSource *s = [self.graph makeNodeForJson:dict];
+    STAssertEqualObjects(s.name, @"testsrcname", @"should make a subject");
+}
+
 @end

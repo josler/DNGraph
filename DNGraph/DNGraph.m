@@ -138,6 +138,26 @@
 }
 
 
+- (id <DNNode>)makeNodeForJson:(NSDictionary *)json
+{
+    if ([[json valueForKey:@"type"] isEqualToString:@"person"]) {
+        DNPerson *person = [self makePersonWithId:[json valueForKey:@"facebookId"] andName:[json valueForKey:@"name"]];
+        [person setRanking:[[json valueForKey:@"ranking"] floatValue]];
+        return person;
+    }
+    else if ([[json valueForKey:@"type"] isEqualToString:@"source"]) {
+        DNSource *source = [self makeSourceWithName:[json valueForKey:@"name"]];
+        [source setRanking:[[json valueForKey:@"ranking"] floatValue]];
+        return source;
+    }
+    else if ([[json valueForKey:@"type"] isEqualToString:@"subject"]) {
+        DNSubject *subject = [self makeSubjectWithId:[json valueForKey:@"facebookId"] andName:[json valueForKey:@"name"] andCategory:[json valueForKey:@"category"]];
+        [subject setRanking:[[json valueForKey:@"ranking"] floatValue]];
+        return subject;
+    }
+    return nil;
+}
+
 #pragma mark - Application's Documents directory
 
 /**
@@ -207,6 +227,20 @@
     }
     
     return __persistentStoreCoordinator;
+}
+
+- (void)resetStore
+{
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite",self.modelName]];
+    [self deletePersistentStore:storeURL];
+}
+
+- (void)deletePersistentStore:(NSURL *)storeURL
+{
+    NSError *error = nil;
+    [[NSFileManager defaultManager] removeItemAtURL:storeURL error:&error];
+    if (error) { // Handle error }
+    }
 }
 
 @end
