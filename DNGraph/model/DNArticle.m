@@ -11,7 +11,7 @@
     self.source = source;
     self.person = person;
     self.subject = subject;
-    self.ranking = ranking;
+    [self setPrimitiveRanking:[NSNumber numberWithFloat:ranking]];
 }
 
 - (UIImage *)getImage
@@ -43,7 +43,7 @@
         [self.person dislike];
     if (self.source)
         [self.source dislike];
-    self.rankingValue = 0; // the actual article is not liked and should go.
+    [self setPrimitiveRanking:[NSNumber numberWithFloat:0.0f]]; // the actual article is not liked and should go.
 }
 
 - (void)resetRanking {} // no meaning for an article as it's ranking composed of it's parts
