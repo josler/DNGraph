@@ -13,7 +13,6 @@ const struct DNSubjectAttributes DNSubjectAttributes = {
 };
 
 const struct DNSubjectRelationships DNSubjectRelationships = {
-	.articles = @"articles",
 };
 
 const struct DNSubjectFetchedProperties DNSubjectFetchedProperties = {
@@ -117,19 +116,6 @@ const struct DNSubjectFetchedProperties DNSubjectFetchedProperties = {
 
 
 
-
-@dynamic articles;
-
-	
-- (NSMutableSet*)articlesSet {
-	[self willAccessValueForKey:@"articles"];
-  
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"articles"];
-  
-	[self didAccessValueForKey:@"articles"];
-	return result;
-}
-	
 
 
 

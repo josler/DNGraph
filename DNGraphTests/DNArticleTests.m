@@ -39,13 +39,15 @@
 - (void)testLike {
     [self createTestArticle];
     [self.testArticle like];
-    STAssertTrue(self.testArticle.source.ranking > 0.5, @"ranking should increase for components");
+    STAssertTrue(self.testArticle.favouriteValue == YES, @"like sets favourite");
 }
 
 - (void)testDislike {
     [self createTestArticle];
+    self.testArticle.favouriteValue = YES;
+    STAssertTrue(self.testArticle.favouriteValue == YES, @"");
     [self.testArticle dislike];
-    STAssertTrue(self.testArticle.source.ranking < 0.5, @"ranking should decrease for components");
+    STAssertTrue(self.testArticle.favouriteValue == NO, @"dislike sets favouriteValue to NO");
     STAssertTrue(self.testArticle.ranking < 0.001, @"ranking (%f) should be zero", self.testArticle.ranking);
 }
 
@@ -65,12 +67,9 @@
     DNSource *source = [DNSource insertInManagedObjectContext:self.managedObjectContext];
     [source setupWithName:@"sourcename"];
     self.testArticle = [DNArticle insertInManagedObjectContext:self.managedObjectContext];
-    [self.testArticle setupWithPerson:testPerson1 Source:source Subject:subject andRanking:1.5f];
+    [self.testArticle setupWithRanking:1.5f andHashValue:@"somehash"];
     STAssertEquals(self.testArticle.ranking, 1.5f, @"ranking set");
-    STAssertEqualObjects(self.testArticle.source, source, @"source set");
-    STAssertEqualObjects(self.testArticle.subject, subject, @"subject set");
-    STAssertEqualObjects(self.testArticle.person, testPerson1, @"person set");
-    STAssertTrue([source.articles containsObject:self.testArticle], @"source articles should contain this");
+    STAssertEqualObjects(self.testArticle.hashValue, @"somehash", @"hash set");
 }
 
 @end

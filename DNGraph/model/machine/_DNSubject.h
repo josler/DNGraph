@@ -14,13 +14,11 @@ extern const struct DNSubjectAttributes {
 } DNSubjectAttributes;
 
 extern const struct DNSubjectRelationships {
-	__unsafe_unretained NSString *articles;
 } DNSubjectRelationships;
 
 extern const struct DNSubjectFetchedProperties {
 } DNSubjectFetchedProperties;
 
-@class DNArticle;
 
 
 
@@ -106,22 +104,10 @@ extern const struct DNSubjectFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSSet *articles;
-
-- (NSMutableSet*)articlesSet;
-
-
-
-
 
 @end
 
 @interface _DNSubject (CoreDataGeneratedAccessors)
-
-- (void)addArticles:(NSSet*)value_;
-- (void)removeArticles:(NSSet*)value_;
-- (void)addArticlesObject:(DNArticle*)value_;
-- (void)removeArticlesObject:(DNArticle*)value_;
 
 @end
 
@@ -165,11 +151,6 @@ extern const struct DNSubjectFetchedProperties {
 - (void)setPrimitiveRankingValue:(float)value_;
 
 
-
-
-
-- (NSMutableSet*)primitiveArticles;
-- (void)setPrimitiveArticles:(NSMutableSet*)value;
 
 
 @end

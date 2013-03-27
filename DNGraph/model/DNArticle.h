@@ -25,7 +25,7 @@
  @param subject The DNSubject related to the article.
  @param ranking The overall article ranking.
 */
-- (void)setupWithPerson:(DNPerson *)person Source:(DNSource *)source Subject:(DNSubject *)subject andRanking: (float)ranking;
+- (void)setupWithRanking: (float)ranking andHashValue:(NSString *)hashValue;
 
 
 /** 

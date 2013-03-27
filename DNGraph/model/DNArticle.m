@@ -6,12 +6,10 @@
 @implementation DNArticle
 
 
-- (void)setupWithPerson:(DNPerson *)person Source:(DNSource *)source Subject:(DNSubject *)subject andRanking: (float)ranking;
+- (void)setupWithRanking: (float)ranking andHashValue: (NSString *)hashValue;
 {
-    self.source = source;
-    self.person = person;
-    self.subject = subject;
     [self setPrimitiveRanking:[NSNumber numberWithFloat:ranking]];
+    self.hashValue = hashValue;
     self.dateCreated = [NSDate date];
 }
 
@@ -28,23 +26,13 @@
 
 - (void)like
 {
-    if (self.subject)
-        [self.subject like];
-    if (self.person)
-        [self.person like];
-    if (self.source)
-        [self.source like];
+    self.favouriteValue = YES;
 }
 
 - (void)dislike
 {
-    if (self.subject)
-        [self.subject dislike];
-    if (self.person)
-        [self.person dislike];
-    if (self.source)
-        [self.source dislike];
     [self setPrimitiveRanking:[NSNumber numberWithFloat:0.0f]]; // the actual article is not liked and should go.
+    self.favouriteValue = NO;
 }
 
 - (void)resetRanking {} // no meaning for an article as it's ranking composed of it's parts

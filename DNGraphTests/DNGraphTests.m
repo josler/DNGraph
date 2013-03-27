@@ -73,13 +73,11 @@
 
 - (void)testMakeArticleWithRankingAndHash {
     float ranking = 1.7f;
-    DNPerson *person = [self.graph makePersonWithId:@"someId" andName:@"somename"];
-    DNArticle *article = [self.graph makeArticleWithSubject:nil Source:nil Author:person Ranking:ranking andHash:@"somehash"];
-    STAssertEqualObjects(person, article.person, @"article should be saved with person");
+    DNArticle *article = [self.graph makeArticleWithRanking:ranking andHash:@"somehash"];
     STAssertEquals(article.hashValue, @"somehash", @"Should return a article with the given hash");
     article.comments  = @"some comments";
     STAssertTrue(article.comments != nil, @"modified article");
-    article = [self.graph makeArticleWithSubject:nil Source:nil Author:nil Ranking:ranking andHash:@"somehash"];
+    article = [self.graph makeArticleWithRanking:ranking andHash:@"somehash"];
     STAssertFalse(article.comments == nil, @"Should return previously created (and modified) article");
 }
 
@@ -91,8 +89,8 @@
 
 - (void)testGetExistingArticleWithHash
 {
-    [self.graph makeArticleWithSubject:nil Source:nil Author:nil Ranking:0.6f andHash:@"hash"];
-    DNArticle *article = [self.graph makeArticleWithSubject:nil Source:nil Author:nil Ranking:0.6f andHash:@"hash"];
+    [self.graph makeArticleWithRanking:0.6f andHash:@"hash"];
+    DNArticle *article = [self.graph makeArticleWithRanking:0.6f andHash:@"hash"];
     STAssertEquals(article.hashValue, @"hash", @"returns existing article");
 }
 

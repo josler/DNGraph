@@ -3,7 +3,7 @@
     <entity name="DNArticle" representedClassName="DNArticle" syncable="YES">
         <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="favourite" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="favourite" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="hashValue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageFilename" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ranking" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -11,21 +11,16 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="videoUrl" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="person" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DNPerson" inverseName="articles" inverseEntity="DNPerson" syncable="YES"/>
-        <relationship name="source" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DNSource" inverseName="articles" inverseEntity="DNSource" syncable="YES"/>
-        <relationship name="subject" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DNSubject" inverseName="articles" inverseEntity="DNSubject" syncable="YES"/>
     </entity>
     <entity name="DNPerson" representedClassName="DNPerson" syncable="YES">
         <attribute name="facebookId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ranking" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="articles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DNArticle" inverseName="person" inverseEntity="DNArticle" syncable="YES"/>
     </entity>
     <entity name="DNSource" representedClassName="DNSource" syncable="YES">
         <attribute name="facebookId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ranking" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="articles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DNArticle" inverseName="source" inverseEntity="DNArticle" syncable="YES"/>
     </entity>
     <entity name="DNSubject" representedClassName="DNSubject" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
@@ -34,12 +29,11 @@
         <attribute name="meta" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ranking" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="articles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DNArticle" inverseName="subject" inverseEntity="DNArticle" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DNArticle" positionX="-117" positionY="-0" width="128" height="240"/>
-        <element name="DNPerson" positionX="-137" positionY="297" width="128" height="105"/>
-        <element name="DNSource" positionX="34" positionY="54" width="128" height="105"/>
-        <element name="DNSubject" positionX="79" positionY="225" width="128" height="150"/>
+        <element name="DNArticle" positionX="-117" positionY="-0" width="128" height="195"/>
+        <element name="DNPerson" positionX="-137" positionY="297" width="128" height="90"/>
+        <element name="DNSource" positionX="34" positionY="54" width="128" height="90"/>
+        <element name="DNSubject" positionX="79" positionY="225" width="128" height="135"/>
     </elements>
 </model>

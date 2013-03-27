@@ -67,13 +67,12 @@
     return person;
 }
 
-- (DNArticle *)makeArticleWithSubject:(DNSubject *)subject Source:(DNSource *)source Author:(DNPerson *)author Ranking:(float)ranking andHash:(NSString *)hashValue
+- (DNArticle *)makeArticleWithRanking:(float)ranking andHash:(NSString *)hashValue
 {
     DNArticle *article = [self getExistingArticleWithHash:hashValue];
     if (article) return article;
     article = [DNArticle insertInManagedObjectContext:self.managedObjectContext];
-    [article setupWithPerson:author Source:source Subject:subject andRanking:ranking];
-    article.hashValue = hashValue;
+    [article setupWithRanking:ranking andHashValue:hashValue];
     return article;
 }
 
@@ -165,7 +164,7 @@
         return subject;
     }
     else if ([[json valueForKey:@"type"] isEqualToString:@"article"]) {
-        DNArticle *article = [self makeArticleWithSubject:nil Source:nil Author:nil Ranking:[[json valueForKey:@"ranking"] floatValue] andHash:[json valueForKey:@"hashValue"]];
+        DNArticle *article = [self makeArticleWithRanking:[[json valueForKey:@"ranking"] floatValue] andHash:[json valueForKey:@"hashValue"]];
         article.videoUrl = [json valueForKey:@"videoUrl"];
         article.imageFilename = [json valueForKey:@"imageFilename"];
         article.comments = [json valueForKey:@"comments"];

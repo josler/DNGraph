@@ -17,9 +17,6 @@ const struct DNArticleAttributes DNArticleAttributes = {
 };
 
 const struct DNArticleRelationships DNArticleRelationships = {
-	.person = @"person",
-	.source = @"source",
-	.subject = @"subject",
 };
 
 const struct DNArticleFetchedProperties DNArticleFetchedProperties = {
@@ -175,18 +172,6 @@ const struct DNArticleFetchedProperties DNArticleFetchedProperties = {
 
 
 
-
-@dynamic person;
-
-	
-
-@dynamic source;
-
-	
-
-@dynamic subject;
-
-	
 
 
 

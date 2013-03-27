@@ -10,7 +10,6 @@ const struct DNSourceAttributes DNSourceAttributes = {
 };
 
 const struct DNSourceRelationships DNSourceRelationships = {
-	.articles = @"articles",
 };
 
 const struct DNSourceFetchedProperties DNSourceFetchedProperties = {
@@ -93,19 +92,6 @@ const struct DNSourceFetchedProperties DNSourceFetchedProperties = {
 
 
 
-
-@dynamic articles;
-
-	
-- (NSMutableSet*)articlesSet {
-	[self willAccessValueForKey:@"articles"];
-  
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"articles"];
-  
-	[self didAccessValueForKey:@"articles"];
-	return result;
-}
-	
 
 
 
