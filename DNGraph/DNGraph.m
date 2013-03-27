@@ -171,14 +171,23 @@
         article.title = [json valueForKey:@"title"];
         article.textValue = [json valueForKey:@"textValue"];
         article.favouriteValue = NO;
-//        article.dateCreated = // TODO: set date
-        if([[json valueForKey:@"favourite"] isEqualToString:@"YES"]) {
+        article.dateCreated = [self setDateFromString:[json valueForKey:@"date"]];
+        if([[json valueForKey:@"favourite"] isEqualToNumber:[NSNumber numberWithInt:1]]) {
             article.favouriteValue = YES;
         }
         article.type = [json valueForKey:@"articleType"];
             
     }
     return nil;
+}
+
+- (NSDate *)setDateFromString:(NSString *)string
+{
+    //2013-03-27T19:57:42.222Z
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
+    NSDate *date = [dateFormatter dateFromString:string];
+    return date;
 }
 
 #pragma mark - Application's Documents directory

@@ -52,8 +52,16 @@
     [dict setValue:self.favourite forKey:@"favourite"];
     [dict setValue:self.imageFilename forKey:@"imageFilename"];
     [dict setValue:self.videoUrl forKey:@"videoUrl"];
+    [dict setValue:[self setDateStringFromDate:self.dateCreated] forKey:@"date"];
     return dict;
 }
 
+- (NSString *)setDateStringFromDate:(NSDate *)date
+{
+    //2013-03-27T19:57:42.222Z
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
+    return [dateFormatter stringFromDate:date];
+}
 
 @end
