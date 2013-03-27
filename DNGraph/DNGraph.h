@@ -84,6 +84,13 @@
 - (NSArray *)getAllNodes;
 
 /**
+ Returns all articles in the graph.
+ 
+ @return Returns all articles.
+ */
+- (NSArray *)getAllArticles;
+
+/**
  Returns a node created from the provided json dictionary (DNStore format).
  
  @return an object conforming to DNNode protocol.

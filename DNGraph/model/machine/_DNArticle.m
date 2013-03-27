@@ -5,6 +5,7 @@
 
 const struct DNArticleAttributes DNArticleAttributes = {
 	.comments = @"comments",
+	.dateCreated = @"dateCreated",
 	.favourite = @"favourite",
 	.hashValue = @"hashValue",
 	.imageFilename = @"imageFilename",
@@ -68,6 +69,13 @@ const struct DNArticleFetchedProperties DNArticleFetchedProperties = {
 
 
 @dynamic comments;
+
+
+
+
+
+
+@dynamic dateCreated;
 
 
 

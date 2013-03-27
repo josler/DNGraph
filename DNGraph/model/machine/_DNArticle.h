@@ -6,6 +6,7 @@
 
 extern const struct DNArticleAttributes {
 	__unsafe_unretained NSString *comments;
+	__unsafe_unretained NSString *dateCreated;
 	__unsafe_unretained NSString *favourite;
 	__unsafe_unretained NSString *hashValue;
 	__unsafe_unretained NSString *imageFilename;
@@ -39,6 +40,7 @@ extern const struct DNArticleFetchedProperties {
 
 
 
+
 @interface DNArticleID : NSManagedObjectID {}
 @end
 
@@ -57,6 +59,16 @@ extern const struct DNArticleFetchedProperties {
 
 
 //- (BOOL)validateComments:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, strong) NSDate* dateCreated;
+
+
+
+//- (BOOL)validateDateCreated:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -183,6 +195,12 @@ extern const struct DNArticleFetchedProperties {
 
 - (NSString*)primitiveComments;
 - (void)setPrimitiveComments:(NSString*)value;
+
+
+
+
+- (NSDate*)primitiveDateCreated;
+- (void)setPrimitiveDateCreated:(NSDate*)value;
 
 
 

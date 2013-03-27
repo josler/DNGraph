@@ -131,13 +131,18 @@
     return array;
 }
 
+- (NSArray *)getAllArticles
+{
+    return [self fetchNodesOfType:@"DNArticle" WithId:nil];
+}
+
 - (NSArray *)getAllNodes
 {
     NSMutableArray *results = [[NSMutableArray alloc] init];
     [results addObjectsFromArray:[self fetchNodesOfType:@"DNPerson" WithId:nil]];
     [results addObjectsFromArray:[self fetchNodesOfType:@"DNSubject" WithId:nil]];
     [results addObjectsFromArray:[self fetchNodesOfType:@"DNSource" WithId:nil]];
-    [results addObject:[self fetchNodesOfType:@"DNArticle" WithId:nil]];
+    [results addObjectsFromArray:[self fetchNodesOfType:@"DNArticle" WithId:nil]];
     return results;
 }
 
@@ -167,6 +172,7 @@
         article.title = [json valueForKey:@"title"];
         article.textValue = [json valueForKey:@"textValue"];
         article.favouriteValue = NO;
+//        article.dateCreated = // TODO: set date
         if([[json valueForKey:@"favourite"] isEqualToString:@"YES"]) {
             article.favouriteValue = YES;
         }

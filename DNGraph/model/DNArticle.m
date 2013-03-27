@@ -12,6 +12,7 @@
     self.person = person;
     self.subject = subject;
     [self setPrimitiveRanking:[NSNumber numberWithFloat:ranking]];
+    self.dateCreated = [NSDate date];
 }
 
 - (UIImage *)getImage
@@ -58,7 +59,7 @@
     [dict setValue:self.hashValue forKey:@"hashValue"];
     [dict setValue:self.title forKey:@"title"];
     [dict setValue:self.textValue forKey:@"textValue"];
-    [dict setValue:[NSNumber numberWithFloat:self.ranking] forKey:@"ranking"];
+    [dict setValue:self.primitiveRanking forKey:@"ranking"];
     [dict setValue:self.comments forKey:@"comments"];
     [dict setValue:self.favourite forKey:@"favourite"];
     [dict setValue:self.imageFilename forKey:@"imageFilename"];
