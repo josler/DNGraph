@@ -1,0 +1,864 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>DNGraph Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">DNGraph </a></h1>
+				<a id="developerHome" href="../index.html">James Osler</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">DNGraph Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/getAllArticles">&nbsp;&nbsp;&nbsp;&nbsp;- getAllArticles</option>
+	
+	<option value="//api/name/getAllNodes">&nbsp;&nbsp;&nbsp;&nbsp;- getAllNodes</option>
+	
+	<option value="//api/name/makeArticleWithSubject:Source:Author:Ranking:andHash:">&nbsp;&nbsp;&nbsp;&nbsp;- makeArticleWithSubject:Source:Author:Ranking:andHash:</option>
+	
+	<option value="//api/name/makeNodeForJson:">&nbsp;&nbsp;&nbsp;&nbsp;- makeNodeForJson:</option>
+	
+	<option value="//api/name/makePersonWithId:andName:">&nbsp;&nbsp;&nbsp;&nbsp;- makePersonWithId:andName:</option>
+	
+	<option value="//api/name/makeSourceWithName:">&nbsp;&nbsp;&nbsp;&nbsp;- makeSourceWithName:</option>
+	
+	<option value="//api/name/makeSubjectWithId:andName:andCategory:">&nbsp;&nbsp;&nbsp;&nbsp;- makeSubjectWithId:andName:andCategory:</option>
+	
+	<option value="//api/name/resetStore">&nbsp;&nbsp;&nbsp;&nbsp;- resetStore</option>
+	
+	<option value="//api/name/saveContext">&nbsp;&nbsp;&nbsp;&nbsp;- saveContext</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Node Access">Node Access</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getAllArticles">getAllArticles</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getAllNodes">getAllNodes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makeArticleWithSubject:Source:Author:Ranking:andHash:">makeArticleWithSubject:Source:Author:Ranking:andHash:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makeNodeForJson:">makeNodeForJson:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makePersonWithId:andName:">makePersonWithId:andName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makeSourceWithName:">makeSourceWithName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makeSubjectWithId:andName:andCategory:">makeSubjectWithId:andName:andCategory:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetStore">resetStore</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveContext">saveContext</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="DNGraph Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">DNGraph Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">DNGraph.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Handles interaction with the Graph.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveContext">&ndash;&nbsp;saveContext</a></code>
+		<span class="tooltip"><p>Saves the managed object context</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Node Access" name="task_Node Access"></a>
+						<h3 class="subsubtitle task-title">Node Access</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/makePersonWithId:andName:">&ndash;&nbsp;makePersonWithId:andName:</a></code>
+		<span class="tooltip"><p>Provides a <a href="../Classes/DNPerson.html">DNPerson</a> node with the given ID.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/makeSubjectWithId:andName:andCategory:">&ndash;&nbsp;makeSubjectWithId:andName:andCategory:</a></code>
+		<span class="tooltip"><p>Returns a <a href="../Classes/DNSubject.html">DNSubject</a> node with the given ID.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/makeSourceWithName:">&ndash;&nbsp;makeSourceWithName:</a></code>
+		<span class="tooltip"><p>Returns a <a href="../Classes/DNSource.html">DNSource</a> node with the given ID.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/makeArticleWithSubject:Source:Author:Ranking:andHash:">&ndash;&nbsp;makeArticleWithSubject:Source:Author:Ranking:andHash:</a></code>
+		<span class="tooltip"><p>Returns an Article with given <a href="../Classes/DNSubject.html">DNSubject</a>, <a href="../Classes/DNSource.html">DNSource</a>, <a href="../Classes/DNPerson.html">DNPerson</a> and ranking matching the hash.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getAllNodes">&ndash;&nbsp;getAllNodes</a></code>
+		<span class="tooltip"><p>Returns all the nodes in the graph, very memory intensive.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getAllArticles">&ndash;&nbsp;getAllArticles</a></code>
+		<span class="tooltip"><p>Returns all articles in the graph.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/makeNodeForJson:">&ndash;&nbsp;makeNodeForJson:</a></code>
+		<span class="tooltip"><p>Returns a node created from the provided json dictionary (DNStore format).</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resetStore">&ndash;&nbsp;resetStore</a></code>
+		<span class="tooltip"><p>Resets the contents of the store, completely removing existing nodes. Use with care!</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/getAllArticles" title="getAllArticles"></a>
+	<h3 class="subsubtitle method-title">getAllArticles</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns all articles in the graph.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)getAllArticles</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns all articles.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns all articles in the graph.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DNGraph.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getAllNodes" title="getAllNodes"></a>
+	<h3 class="subsubtitle method-title">getAllNodes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns all the nodes in the graph, very memory intensive.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)getAllNodes</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns all nodes.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns all the nodes in the graph, very memory intensive.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DNGraph.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/makeArticleWithSubject:Source:Author:Ranking:andHash:" title="makeArticleWithSubject:Source:Author:Ranking:andHash:"></a>
+	<h3 class="subsubtitle method-title">makeArticleWithSubject:Source:Author:Ranking:andHash:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an Article with given <a href="../Classes/DNSubject.html">DNSubject</a>, <a href="../Classes/DNSource.html">DNSource</a>, <a href="../Classes/DNPerson.html">DNPerson</a> and ranking matching the hash.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (DNArticle *)makeArticleWithSubject:(DNSubject *)<em>subject</em> Source:(DNSource *)<em>source</em> Author:(DNPerson *)<em>author</em> Ranking:(float)<em>ranking</em> andHash:(NSString *)<em>hashValue</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>subject</em></dt>
+			<dd><p>The <a href="../Classes/DNSubject.html">DNSubject</a> for the article.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>source</em></dt>
+			<dd><p>The <a href="../Classes/DNSource.html">DNSource</a> for the article.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>author</em></dt>
+			<dd><p>The <a href="../Classes/DNPerson.html">DNPerson</a> (author) of the article.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>ranking</em></dt>
+			<dd><p>The overall ranking of the article.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>hashValue</em></dt>
+			<dd><p>A hash value used to determine uniqueness.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created <a href="../Classes/DNArticle.html">DNArticle</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns an Article with given <a href="../Classes/DNSubject.html">DNSubject</a>, <a href="../Classes/DNSource.html">DNSource</a>, <a href="../Classes/DNPerson.html">DNPerson</a> and ranking matching the hash.</p>
+
+<p>If the article already exists (matching hash), then the existing instance will be returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DNGraph.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/makeNodeForJson:" title="makeNodeForJson:"></a>
+	<h3 class="subsubtitle method-title">makeNodeForJson:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a node created from the provided json dictionary (DNStore format).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id&lt;DNNode&gt;)makeNodeForJson:(NSDictionary *)<em>json</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>json</em></dt>
+			<dd><p>The json object representing a node.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>an object conforming to <a href="../Protocols/DNNode.html">DNNode</a> protocol.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a node created from the provided json dictionary (DNStore format).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DNGraph.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/makePersonWithId:andName:" title="makePersonWithId:andName:"></a>
+	<h3 class="subsubtitle method-title">makePersonWithId:andName:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Provides a <a href="../Classes/DNPerson.html">DNPerson</a> node with the given ID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (DNPerson *)makePersonWithId:(NSString *)<em>facebookId</em> andName:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>facebookId</em></dt>
+			<dd><p>An ID provided by Facebook Stream.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>The name for the person.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A <a href="../Classes/DNPerson.html">DNPerson</a> matching the ID given.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Provides a <a href="../Classes/DNPerson.html">DNPerson</a> node with the given ID.</p>
+
+<p>If the person already exists (matching ID), then the existing instance will be returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DNGraph.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/makeSourceWithName:" title="makeSourceWithName:"></a>
+	<h3 class="subsubtitle method-title">makeSourceWithName:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a <a href="../Classes/DNSource.html">DNSource</a> node with the given ID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (DNSource *)makeSourceWithName:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>The name for the source.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A <a href="../Classes/DNSource.html">DNSource</a> matching the ID given.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a <a href="../Classes/DNSource.html">DNSource</a> node with the given ID.</p>
+
+<p>If the source already exists (matching name), then the existing instance will be returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DNGraph.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/makeSubjectWithId:andName:andCategory:" title="makeSubjectWithId:andName:andCategory:"></a>
+	<h3 class="subsubtitle method-title">makeSubjectWithId:andName:andCategory:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a <a href="../Classes/DNSubject.html">DNSubject</a> node with the given ID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (DNSubject *)makeSubjectWithId:(NSString *)<em>facebookId</em> andName:(NSString *)<em>name</em> andCategory:(NSString *)<em>category</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>facebookId</em></dt>
+			<dd><p>An ID provided by Facebook Stream.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>The name for the subject.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>category</em></dt>
+			<dd><p>The category for the subject.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A <a href="../Classes/DNSubject.html">DNSubject</a> matching the ID given.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a <a href="../Classes/DNSubject.html">DNSubject</a> node with the given ID.</p>
+
+<p>If the subject already exists (matching ID), then the existing instance will be returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DNGraph.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resetStore" title="resetStore"></a>
+	<h3 class="subsubtitle method-title">resetStore</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Resets the contents of the store, completely removing existing nodes. Use with care!</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)resetStore</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Resets the contents of the store, completely removing existing nodes. Use with care!</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DNGraph.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveContext" title="saveContext"></a>
+	<h3 class="subsubtitle method-title">saveContext</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Saves the managed object context</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)saveContext</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Saves the managed object context</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DNGraph.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 James Osler. All rights reserved. (Last updated: 2013-04-05)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
