@@ -44,15 +44,21 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/getAllArticles">&nbsp;&nbsp;&nbsp;&nbsp;- getAllArticles</option>
+	
 	<option value="//api/name/getAllNodes">&nbsp;&nbsp;&nbsp;&nbsp;- getAllNodes</option>
 	
-	<option value="//api/name/makeArticleWithSubject:Source:Author:andHash:">&nbsp;&nbsp;&nbsp;&nbsp;- makeArticleWithSubject:Source:Author:andHash:</option>
+	<option value="//api/name/makeArticleWithSubject:Source:Author:Ranking:andHash:">&nbsp;&nbsp;&nbsp;&nbsp;- makeArticleWithSubject:Source:Author:Ranking:andHash:</option>
+	
+	<option value="//api/name/makeNodeForJson:">&nbsp;&nbsp;&nbsp;&nbsp;- makeNodeForJson:</option>
 	
 	<option value="//api/name/makePersonWithId:andName:">&nbsp;&nbsp;&nbsp;&nbsp;- makePersonWithId:andName:</option>
 	
 	<option value="//api/name/makeSourceWithName:">&nbsp;&nbsp;&nbsp;&nbsp;- makeSourceWithName:</option>
 	
 	<option value="//api/name/makeSubjectWithId:andName:andCategory:">&nbsp;&nbsp;&nbsp;&nbsp;- makeSubjectWithId:andName:andCategory:</option>
+	
+	<option value="//api/name/resetStore">&nbsp;&nbsp;&nbsp;&nbsp;- resetStore</option>
 	
 	<option value="//api/name/saveContext">&nbsp;&nbsp;&nbsp;&nbsp;- saveContext</option>
 	
@@ -86,15 +92,21 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getAllArticles">getAllArticles</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getAllNodes">getAllNodes</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makeArticleWithSubject:Source:Author:andHash:">makeArticleWithSubject:Source:Author:andHash:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makeArticleWithSubject:Source:Author:Ranking:andHash:">makeArticleWithSubject:Source:Author:Ranking:andHash:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makeNodeForJson:">makeNodeForJson:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makePersonWithId:andName:">makePersonWithId:andName:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makeSourceWithName:">makeSourceWithName:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/makeSubjectWithId:andName:andCategory:">makeSubjectWithId:andName:andCategory:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetStore">resetStore</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveContext">saveContext</a></span></li>
 	
@@ -189,8 +201,8 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/makeArticleWithSubject:Source:Author:andHash:">&ndash;&nbsp;makeArticleWithSubject:Source:Author:andHash:</a></code>
-		<span class="tooltip"><p>Returns an Article with given <a href="../Classes/DNSubject.html">DNSubject</a>, <a href="../Classes/DNSource.html">DNSource</a> and <a href="../Classes/DNPerson.html">DNPerson</a>, matching the hash.</p></span>
+		<code><a href="#//api/name/makeArticleWithSubject:Source:Author:Ranking:andHash:">&ndash;&nbsp;makeArticleWithSubject:Source:Author:Ranking:andHash:</a></code>
+		<span class="tooltip"><p>Returns an Article with given <a href="../Classes/DNSubject.html">DNSubject</a>, <a href="../Classes/DNSource.html">DNSource</a>, <a href="../Classes/DNPerson.html">DNPerson</a> and ranking matching the hash.</p></span>
 	</span>
 	
 	
@@ -198,6 +210,27 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/getAllNodes">&ndash;&nbsp;getAllNodes</a></code>
 		<span class="tooltip"><p>Returns all the nodes in the graph, very memory intensive.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getAllArticles">&ndash;&nbsp;getAllArticles</a></code>
+		<span class="tooltip"><p>Returns all articles in the graph.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/makeNodeForJson:">&ndash;&nbsp;makeNodeForJson:</a></code>
+		<span class="tooltip"><p>Returns a node created from the provided json dictionary (DNStore format).</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resetStore">&ndash;&nbsp;resetStore</a></code>
+		<span class="tooltip"><p>Resets the contents of the store, completely removing existing nodes. Use with care!</p></span>
 	</span>
 	
 	
@@ -217,6 +250,52 @@
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/getAllArticles" title="getAllArticles"></a>
+	<h3 class="subsubtitle method-title">getAllArticles</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns all articles in the graph.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)getAllArticles</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns all articles.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns all articles in the graph.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DNGraph.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/getAllNodes" title="getAllNodes"></a>
@@ -265,18 +344,18 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/makeArticleWithSubject:Source:Author:andHash:" title="makeArticleWithSubject:Source:Author:andHash:"></a>
-	<h3 class="subsubtitle method-title">makeArticleWithSubject:Source:Author:andHash:</h3>
+	<a name="//api/name/makeArticleWithSubject:Source:Author:Ranking:andHash:" title="makeArticleWithSubject:Source:Author:Ranking:andHash:"></a>
+	<h3 class="subsubtitle method-title">makeArticleWithSubject:Source:Author:Ranking:andHash:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns an Article with given <a href="../Classes/DNSubject.html">DNSubject</a>, <a href="../Classes/DNSource.html">DNSource</a> and <a href="../Classes/DNPerson.html">DNPerson</a>, matching the hash.</p>
+		<p>Returns an Article with given <a href="../Classes/DNSubject.html">DNSubject</a>, <a href="../Classes/DNSource.html">DNSource</a>, <a href="../Classes/DNPerson.html">DNPerson</a> and ranking matching the hash.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (DNArticle *)makeArticleWithSubject:(DNSubject *)<em>subject</em> Source:(DNSource *)<em>source</em> Author:(DNPerson *)<em>author</em> andHash:(NSString *)<em>hashValue</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (DNArticle *)makeArticleWithSubject:(DNSubject *)<em>subject</em> Source:(DNSource *)<em>source</em> Author:(DNPerson *)<em>author</em> Ranking:(float)<em>ranking</em> andHash:(NSString *)<em>hashValue</em></code></div>
 
     
 	
@@ -299,6 +378,11 @@
 		</dl>
 		
 		<dl class="argument-def parameter-def">
+			<dt><em>ranking</em></dt>
+			<dd><p>The overall ranking of the article.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
 			<dt><em>hashValue</em></dt>
 			<dd><p>A hash value used to determine uniqueness.</p></dd>
 		</dl>
@@ -318,9 +402,65 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns an Article with given <a href="../Classes/DNSubject.html">DNSubject</a>, <a href="../Classes/DNSource.html">DNSource</a> and <a href="../Classes/DNPerson.html">DNPerson</a>, matching the hash.</p>
+		<p>Returns an Article with given <a href="../Classes/DNSubject.html">DNSubject</a>, <a href="../Classes/DNSource.html">DNSource</a>, <a href="../Classes/DNPerson.html">DNPerson</a> and ranking matching the hash.</p>
 
 <p>If the article already exists (matching hash), then the existing instance will be returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DNGraph.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/makeNodeForJson:" title="makeNodeForJson:"></a>
+	<h3 class="subsubtitle method-title">makeNodeForJson:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a node created from the provided json dictionary (DNStore format).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id&lt;DNNode&gt;)makeNodeForJson:(NSDictionary *)<em>json</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>json</em></dt>
+			<dd><p>The json object representing a node.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>an object conforming to <a href="../Protocols/DNNode.html">DNNode</a> protocol.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a node created from the provided json dictionary (DNStore format).</p>
 	</div>
 	
 	
@@ -527,6 +667,47 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/resetStore" title="resetStore"></a>
+	<h3 class="subsubtitle method-title">resetStore</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Resets the contents of the store, completely removing existing nodes. Use with care!</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)resetStore</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Resets the contents of the store, completely removing existing nodes. Use with care!</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DNGraph.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/saveContext" title="saveContext"></a>
 	<h3 class="subsubtitle method-title">saveContext</h3>
 	
@@ -580,7 +761,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 James Osler. All rights reserved. (Last updated: 2013-03-13)</span><br />
+						<p><span class="copyright">&copy; 2013 James Osler. All rights reserved. (Last updated: 2013-04-05)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						
