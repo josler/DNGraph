@@ -93,6 +93,7 @@
 /**
  Returns a node created from the provided json dictionary (DNStore format).
  
+ @param json The json object representing a node.
  @return an object conforming to DNNode protocol.
  */
 - (id <DNNode>)makeNodeForJson:(NSDictionary *)json;

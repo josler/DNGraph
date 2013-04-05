@@ -38,24 +38,15 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/weightedRank">&nbsp;&nbsp;&nbsp;&nbsp;weightedRank</option>
-	
-	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/getOverallRanking">&nbsp;&nbsp;&nbsp;&nbsp;- getOverallRanking</option>
+	<option value="//api/name/getImage">&nbsp;&nbsp;&nbsp;&nbsp;- getImage</option>
 	
-	<option value="//api/name/setComments:withPeople:">&nbsp;&nbsp;&nbsp;&nbsp;- setComments:withPeople:</option>
-	
-	<option value="//api/name/setWeightedRankWithMeanRank:andMinimumNodes:">&nbsp;&nbsp;&nbsp;&nbsp;- setWeightedRankWithMeanRank:andMinimumNodes:</option>
-	
-	<option value="//api/name/setupWithSubject:Source:andAuthor:">&nbsp;&nbsp;&nbsp;&nbsp;- setupWithSubject:Source:andAuthor:</option>
+	<option value="//api/name/setupWithPerson:Source:Subject:andRanking:">&nbsp;&nbsp;&nbsp;&nbsp;- setupWithPerson:Source:Subject:andRanking:</option>
 	
 	
 	
@@ -79,25 +70,15 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/weightedRank">weightedRank</a></span></li>
-	
-</ul></li>
-
 
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getOverallRanking">getOverallRanking</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getImage">getImage</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setComments:withPeople:">setComments:withPeople:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setWeightedRankWithMeanRank:andMinimumNodes:">setWeightedRankWithMeanRank:andMinimumNodes:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setupWithSubject:Source:andAuthor:">setupWithSubject:Source:andAuthor:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setupWithPerson:Source:Subject:andRanking:">setupWithPerson:Source:Subject:andRanking:</a></span></li>
 	
 </ul></li>
 
@@ -125,6 +106,9 @@
 	<td class="specification-title">Inherits from</td>
 	<td class="specification-value">_DNArticle : NSManagedObject</td>
 </tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value"><a href="../Protocols/DNNode.html">DNNode</a></td>
+</tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">DNArticle.h</td>
 </tr>
@@ -136,7 +120,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Defines an article composed of several nodes, and content added to it.</p>
+						<p>Defines an article composed from nodes, and content added to it.</p>
 					</div>
 					
 					
@@ -154,36 +138,15 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/weightedRank">&nbsp;&nbsp;weightedRank</a></code>
-		<span class="tooltip"><p>The euclidian weighted rank from component nodes. Has to be set with <a href="#//api/name/setWeightedRankWithMeanRank:andMinimumNodes:">setWeightedRankWithMeanRank:andMinimumNodes:</a> first.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/setupWithSubject:Source:andAuthor:">&ndash;&nbsp;setupWithSubject:Source:andAuthor:</a></code>
+		<code><a href="#//api/name/setupWithPerson:Source:Subject:andRanking:">&ndash;&nbsp;setupWithPerson:Source:Subject:andRanking:</a></code>
 		<span class="tooltip"><p>Sets up the DNArticle with a given <a href="../Classes/DNSubject.html">DNSubject</a>, <a href="../Classes/DNSource.html">DNSource</a> and <a href="../Classes/DNPerson.html">DNPerson</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/setComments:withPeople:">&ndash;&nbsp;setComments:withPeople:</a></code>
-		<span class="tooltip"><p>Adds comments to an article, from the people who made them. This affects the ranking.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/setWeightedRankWithMeanRank:andMinimumNodes:">&ndash;&nbsp;setWeightedRankWithMeanRank:andMinimumNodes:</a></code>
-		<span class="tooltip"><p>Sets the weighted rank for this article in comparison to the others, using the mean rank and minimum nodes.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/getOverallRanking">&ndash;&nbsp;getOverallRanking</a></code>
-		<span class="tooltip"><p>Gets the overall (non-weighted) ranking for this DNArticle, based on component nodes.</p></span>
+		<code><a href="#//api/name/getImage">&ndash;&nbsp;getImage</a></code>
+		<span class="tooltip"><p>Gets The UIImage for the article.</p></span>
 	</span>
 	
 	
@@ -196,53 +159,6 @@
 					
 					
 					
-					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/weightedRank" title="weightedRank"></a>
-	<h3 class="subsubtitle method-title">weightedRank</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The euclidian weighted rank from component nodes. Has to be set with <a href="#//api/name/setWeightedRankWithMeanRank:andMinimumNodes:">setWeightedRankWithMeanRank:andMinimumNodes:</a> first.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic) float weightedRank</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The euclidian weighted rank from component nodes. Has to be set with <a href="#//api/name/setWeightedRankWithMeanRank:andMinimumNodes:">setWeightedRankWithMeanRank:andMinimumNodes:</a> first.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DNArticle.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
 					
 					
 					
@@ -252,18 +168,18 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/getOverallRanking" title="getOverallRanking"></a>
-	<h3 class="subsubtitle method-title">getOverallRanking</h3>
+	<a name="//api/name/getImage" title="getImage"></a>
+	<h3 class="subsubtitle method-title">getImage</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Gets the overall (non-weighted) ranking for this DNArticle, based on component nodes.</p>
+		<p>Gets The UIImage for the article.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (float)getOverallRanking</code></div>
+	<div class="method-subsection method-declaration"><code>- (UIImage *)getImage</code></div>
 
     
 	
@@ -271,7 +187,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The overall ranking (mean) for the DNArticle (non-weighted).</p>
+		<p>UIImage, nil if no imageFilename set.</p>
 	</div>
 	
 	
@@ -280,7 +196,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Gets the overall (non-weighted) ranking for this DNArticle, based on component nodes.</p>
+		<p>Gets The UIImage for the article.</p>
 	</div>
 	
 	
@@ -298,120 +214,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/setComments:withPeople:" title="setComments:withPeople:"></a>
-	<h3 class="subsubtitle method-title">setComments:withPeople:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Adds comments to an article, from the people who made them. This affects the ranking.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)setComments:(NSString *)<em>comments</em> withPeople:(NSArray *)<em>people</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>comments</em></dt>
-			<dd><p>The string to be displayed for comments.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>people</em></dt>
-			<dd><p>The people who made the comments (NSArray of <a href="../Classes/DNPerson.html">DNPerson</a>).</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Adds comments to an article, from the people who made them. This affects the ranking.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DNArticle.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/setWeightedRankWithMeanRank:andMinimumNodes:" title="setWeightedRankWithMeanRank:andMinimumNodes:"></a>
-	<h3 class="subsubtitle method-title">setWeightedRankWithMeanRank:andMinimumNodes:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Sets the weighted rank for this article in comparison to the others, using the mean rank and minimum nodes.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)setWeightedRankWithMeanRank:(float)<em>meanRank</em> andMinimumNodes:(float)<em>minimumNodes</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>meanRank</em></dt>
-			<dd><p>The mean rank of all articles in the system.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>minimumNodes</em></dt>
-			<dd><p>How many nodes must an article have to be eligible for ranking (suggested value of 2).</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Sets the weighted rank for this article in comparison to the others, using the mean rank and minimum nodes.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">DNArticle.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/setupWithSubject:Source:andAuthor:" title="setupWithSubject:Source:andAuthor:"></a>
-	<h3 class="subsubtitle method-title">setupWithSubject:Source:andAuthor:</h3>
+	<a name="//api/name/setupWithPerson:Source:Subject:andRanking:" title="setupWithPerson:Source:Subject:andRanking:"></a>
+	<h3 class="subsubtitle method-title">setupWithPerson:Source:Subject:andRanking:</h3>
 	
 	
 	
@@ -421,7 +225,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setupWithSubject:(DNSubject *)<em>subject</em> Source:(DNSource *)<em>source</em> andAuthor:(DNPerson *)<em>author</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setupWithPerson:(DNPerson *)<em>person</em> Source:(DNSource *)<em>source</em> Subject:(DNSubject *)<em>subject</em> andRanking:(float)<em>ranking</em></code></div>
 
     
 	
@@ -429,18 +233,23 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>subject</em></dt>
-			<dd><p>The <a href="../Classes/DNSubject.html">DNSubject</a> for the article.</p></dd>
+			<dt><em>person</em></dt>
+			<dd><p>The <a href="../Classes/DNPerson.html">DNPerson</a> (author) related to the article.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>source</em></dt>
-			<dd><p>The <a href="../Classes/DNSource.html">DNSource</a> for the article.</p></dd>
+			<dd><p>The <a href="../Classes/DNSource.html">DNSource</a> related to the article.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>author</em></dt>
-			<dd><p>The <a href="../Classes/DNPerson.html">DNPerson</a> (author) of the article.</p></dd>
+			<dt><em>subject</em></dt>
+			<dd><p>The <a href="../Classes/DNSubject.html">DNSubject</a> related to the article.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>ranking</em></dt>
+			<dd><p>The overall article ranking.</p></dd>
 		</dl>
 		
 	</div>
@@ -483,7 +292,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 James Osler. All rights reserved. (Last updated: 2013-03-13)</span><br />
+						<p><span class="copyright">&copy; 2013 James Osler. All rights reserved. (Last updated: 2013-04-05)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

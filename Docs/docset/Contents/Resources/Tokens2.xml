@@ -84,11 +84,11 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/makeArticleWithSubject:Source:Author:andHash:</TokenIdentifier>
-			<Abstract type="html">Returns an Article with given DNSubject, DNSource and DNPerson, matching the hash.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/makeArticleWithSubject:Source:Author:Ranking:andHash:</TokenIdentifier>
+			<Abstract type="html">Returns an Article with given DNSubject, DNSource, DNPerson and ranking matching the hash.</Abstract>
 			<DeclaredIn>DNGraph.h</DeclaredIn>			
 			
-			<Declaration>- (DNArticle *)makeArticleWithSubject:(DNSubject *)subject Source:(DNSource *)source Author:(DNPerson *)author andHash:(NSString *)hashValue</Declaration>
+			<Declaration>- (DNArticle *)makeArticleWithSubject:(DNSubject *)subject Source:(DNSource *)source Author:(DNPerson *)author Ranking:(float)ranking andHash:(NSString *)hashValue</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>subject</Name>
@@ -100,12 +100,15 @@
 					<Name>author</Name>
 					<Abstract type="html">The DNPerson (author) of the article.</Abstract>
 				</Parameter><Parameter>
+					<Name>ranking</Name>
+					<Abstract type="html">The overall ranking of the article.</Abstract>
+				</Parameter><Parameter>
 					<Name>hashValue</Name>
 					<Abstract type="html">A hash value used to determine uniqueness.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">Returns the created DNArticle.</Abstract></ReturnValue>
-			<Anchor>//api/name/makeArticleWithSubject:Source:Author:andHash:</Anchor>
+			<Anchor>//api/name/makeArticleWithSubject:Source:Author:Ranking:andHash:</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
@@ -118,6 +121,47 @@
 			
 			<ReturnValue><Abstract type="html">Returns all nodes.</Abstract></ReturnValue>
 			<Anchor>//api/name/getAllNodes</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/getAllArticles</TokenIdentifier>
+			<Abstract type="html">Returns all articles in the graph.</Abstract>
+			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)getAllArticles</Declaration>
+			
+			<ReturnValue><Abstract type="html">Returns all articles.</Abstract></ReturnValue>
+			<Anchor>//api/name/getAllArticles</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/makeNodeForJson:</TokenIdentifier>
+			<Abstract type="html">Returns a node created from the provided json dictionary (DNStore format).</Abstract>
+			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			
+			<Declaration>- (id&lt;DNNode&gt;)makeNodeForJson:(NSDictionary *)json</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>json</Name>
+					<Abstract type="html">The json object representing a node.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">an object conforming to DNNode protocol.</Abstract></ReturnValue>
+			<Anchor>//api/name/makeNodeForJson:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNGraph/resetStore</TokenIdentifier>
+			<Abstract type="html">Resets the contents of the store, completely removing existing nodes. Use with care!</Abstract>
+			<DeclaredIn>DNGraph.h</DeclaredIn>			
+			
+			<Declaration>- (void)resetStore</Declaration>
+			
+			
+			<Anchor>//api/name/resetStore</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
