@@ -10,7 +10,9 @@ extern const struct DNArticleAttributes {
 	__unsafe_unretained NSString *favourite;
 	__unsafe_unretained NSString *hashValue;
 	__unsafe_unretained NSString *imageFilename;
+	__unsafe_unretained NSString *personId;
 	__unsafe_unretained NSString *ranking;
+	__unsafe_unretained NSString *subjectId;
 	__unsafe_unretained NSString *textValue;
 	__unsafe_unretained NSString *title;
 	__unsafe_unretained NSString *type;
@@ -29,6 +31,8 @@ extern const struct DNArticleFetchedProperties {
 @class DNPerson;
 @class DNSource;
 @class DNSubject;
+
+
 
 
 
@@ -108,6 +112,16 @@ extern const struct DNArticleFetchedProperties {
 
 
 
+@property (nonatomic, strong) NSString* personId;
+
+
+
+//- (BOOL)validatePersonId:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
 @property (nonatomic, strong) NSNumber* ranking;
 
 
@@ -117,6 +131,16 @@ extern const struct DNArticleFetchedProperties {
 - (void)setRankingValue:(float)value_;
 
 //- (BOOL)validateRanking:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, strong) NSString* subjectId;
+
+
+
+//- (BOOL)validateSubjectId:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -226,11 +250,23 @@ extern const struct DNArticleFetchedProperties {
 
 
 
+- (NSString*)primitivePersonId;
+- (void)setPrimitivePersonId:(NSString*)value;
+
+
+
+
 - (NSNumber*)primitiveRanking;
 - (void)setPrimitiveRanking:(NSNumber*)value;
 
 - (float)primitiveRankingValue;
 - (void)setPrimitiveRankingValue:(float)value_;
+
+
+
+
+- (NSString*)primitiveSubjectId;
+- (void)setPrimitiveSubjectId:(NSString*)value;
 
 
 

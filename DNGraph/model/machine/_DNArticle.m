@@ -9,7 +9,9 @@ const struct DNArticleAttributes DNArticleAttributes = {
 	.favourite = @"favourite",
 	.hashValue = @"hashValue",
 	.imageFilename = @"imageFilename",
+	.personId = @"personId",
 	.ranking = @"ranking",
+	.subjectId = @"subjectId",
 	.textValue = @"textValue",
 	.title = @"title",
 	.type = @"type",
@@ -122,6 +124,13 @@ const struct DNArticleFetchedProperties DNArticleFetchedProperties = {
 
 
 
+@dynamic personId;
+
+
+
+
+
+
 @dynamic ranking;
 
 
@@ -143,6 +152,13 @@ const struct DNArticleFetchedProperties DNArticleFetchedProperties = {
 - (void)setPrimitiveRankingValue:(float)value_ {
 	[self setPrimitiveRanking:[NSNumber numberWithFloat:value_]];
 }
+
+
+
+
+
+@dynamic subjectId;
+
 
 
 
